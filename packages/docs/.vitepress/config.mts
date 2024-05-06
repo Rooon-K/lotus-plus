@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Lotuts-Plus",
   description: "一个 vue3 组件库",
-  base: '/lotus-plus/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
