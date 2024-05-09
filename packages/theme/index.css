@@ -1,1 +1,24 @@
-@import './reset.css'
+@import "./variable.css";
+/* @import "./reset.css"; */
+@import "./components/Button/index.css";
+@import "./colors.css";
+@import "./dark.css";
+
+:root {
+
+  /* borderSize */
+  --lotus-border-small: var(--lotus-border-2);
+  --lotus-border-default: var(--lotus-border-3);
+  --lotus-border-large: var(--lotus-border-4);
+
+  /* size */
+  --lotus-size-small: var(--lotus-size-7);
+  --lotus-size-default: var(--lotus-size-8);
+  --lotus-size-large: var(--lotus-size-9);
+
+  /* fontSize */
+  --lotus-font-size-small: var(--lotus-font-size-body-2);
+  --lotus-font-size-default: var(--lotus-font-size-body-3);
+  --lotus-font-size-medium: var(--lotus-font-size-body-4);
+  --lotus-font-size-large: var(--lotus-font-size-body-4);
+}

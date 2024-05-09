@@ -3,23 +3,26 @@
 layout: home
 
 hero:
-  name: "Lotuts-Plus"
-  text: "一个 vue3 组件库"
-  tagline: My great project tagline
+  name: "Lotus-Plus"
+  text: "无忧果组件库"
+  tagline: 基于 Vue3 + TS 同时兼容桌面端、移动端
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 开始使用
+      link: /guide/get-start
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 组件
+      link: /components/button
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 💻
+    title: 双端兼容
+    details: 同时兼容桌面端和移动端大部分场景, 支持响应式布局。
+  - icon: 📋
+    title: 样式分离
+    details: 基于 Headless UI 思想, 将 UI 逻辑和交互行为与 CSS样式 分离, 使组件样式高度可自定义, 同时提供一套预设样式, 供开箱即用。
+  - icon: 🪛
+    title: 文档丰富
+    details: 在线文档包含详细组件文档和示例, 展示组件的功能和使用方法。
 ---
 

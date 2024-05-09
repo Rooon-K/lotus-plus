@@ -1,4 +1,8 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
+import {
+  containerPreview,
+  componentPreview,
+} from "@vitepress-demo-preview/plugin";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,22 +11,32 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "开始使用", link: "/guide/get-start" },
+      { text: "组件", link: "/components/button" },
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "开发指南",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
+          { text: "快速开始", link: "guide/get-start" },
+          // { text: "暗黑模式", link: "guide/dark-mode" },
+        ],
+      },
+      {
+        text: "基础组件",
+        items: [{ text: "Button 按钮", link: "components/button" }],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/Rooon-K/lotus-plus" },
+    ],
+  },
+  markdown: {
+    config(md) {
+      md.use(containerPreview);
+      md.use(componentPreview);
+    },
+  },
+});

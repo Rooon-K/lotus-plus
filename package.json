@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @lotus-plus/play dev",
-    "docs:dev": "pnpm --filter @lotus-plus/docs dev",
+    "dev": "pnpm --filter @lotus-plus/play dev --port 3000",
+    "docs:dev": "pnpm --filter @lotus-plus/docs dev --port 3001",
     "docs:build": "pnpm --filter @lotus-plus/docs build",
     "docs:preview": "pnpm --filter @lotus-plus/docs preview",
-    "test": "echo 'todo'"
+    "test": "pnpm --filter @lotus-plus/components test"
   },
   "keywords": [],
   "author": "",

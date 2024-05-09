@@ -1,38 +1,41 @@
 {
-  "hash": "68373376",
-  "configHash": "612777c9",
-  "lockfileHash": "ec2017a9",
-  "browserHash": "68f662a6",
+  "hash": "850bbaed",
+  "configHash": "287b119c",
+  "lockfileHash": "b47fa6cb",
+  "browserHash": "7b00e263",
   "optimized": {
     "vue": {
       "src": "../../../../../node_modules/.pnpm/vue@3.4.26_typescript@5.4.5/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "bb3b1870",
+      "fileHash": "e27e9895",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../../node_modules/.pnpm/@vue+devtools-api@7.1.3_vue@3.4.26_typescript@5.4.5_/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "bc5f563e",
+      "fileHash": "4f44a48a",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../../node_modules/.pnpm/@vueuse+core@10.9.0_vue@3.4.26_typescript@5.4.5_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "71bdee94",
+      "fileHash": "f2043f82",
       "needsInterop": false
     },
-    "@theme/index": {
-      "src": "../../../../../node_modules/.pnpm/vitepress@1.1.4_@algolia+client-search@4.23.3_@types+node@20.12.8_async-validator@4.2.5_postc_euo5vpkvfit3codhvj2dnuokku/node_modules/vitepress/dist/client/theme-default/index.js",
-      "file": "@theme_index.js",
-      "fileHash": "9242dc98",
+    "@vitepress-demo-preview/component": {
+      "src": "../../../../../node_modules/.pnpm/@vitepress-demo-preview+component@2.3.2_vitepress@1.1.4_@algolia+client-search@4.23.3_@types+_vgtuhh2jzmg4q62uagzbg44ncm/node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
+      "file": "@vitepress-demo-preview_component.js",
+      "fileHash": "dd904717",
+      "needsInterop": false
+    },
+    "lodash-es": {
+      "src": "../../../../../node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js",
+      "file": "lodash-es.js",
+      "fileHash": "1b23ff6f",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-AGFN5MDB": {
-      "file": "chunk-AGFN5MDB.js"
-    },
     "chunk-UEXYYPHJ": {
       "file": "chunk-UEXYYPHJ.js"
     }

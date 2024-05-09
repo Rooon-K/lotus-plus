@@ -1,0 +1,206 @@
+:root {
+
+  /* borderSize */
+  --lotus-border-none: 0;
+  --lotus-border-1: 1px;
+  --lotus-border-2: 2px;
+  --lotus-border-3: 3px;
+  --lotus-border-4: 4px;
+  --lotus-border-5: 5px;
+
+  /* borderStyle */
+  --lotus-border-solid: solid;
+  --lotus-border-dashed: dashed;
+  --lotus-border-dotted: dotted;
+  --lotus-border-double: double;
+  --lotus-border-hidden: hidden;
+  --lotus-border-none: none;
+
+  /* radius */
+  --lotus-border-radius-none: 0;
+  --lotus-border-radius-sm: 2px;
+  --lotus-border-radius-default: 4px;
+  --lotus-border-radius-md: 6px;
+  --lotus-border-radius-lg: 8px;
+  --lotus-border-radius-round: 20px;
+  --lotus-border-radius-circle: 50%;
+  --lotus-border-radius-full: 100%;
+
+  /* shadow distance */
+  --lotus-shadow-distance-none: 0;
+  --lotus-shadow-distance-1: 1px;
+  --lotus-shadow-distance-2: 2px;
+  --lotus-shadow-distance-3: 3px;
+  --lotus-shadow-distance-4: 4px;
+
+  /* size */
+  --lotus-size-none: 0;
+  --lotus-size-1: 4px;
+  --lotus-size-2: 8px;
+  --lotus-size-3: 12px;
+  --lotus-size-4: 16px;
+  --lotus-size-5: 20px;
+  --lotus-size-6: 24px;
+  --lotus-size-7: 28px;
+  --lotus-size-8: 32px;
+  --lotus-size-9: 36px;
+  --lotus-size-10: 40px;
+  --lotus-size-11: 44px;
+  --lotus-size-12: 48px;
+  --lotus-size-13: 52px;
+  --lotus-size-14: 56px;
+  --lotus-size-15: 60px;
+  --lotus-size-16: 64px;
+  --lotus-size-17: 68px;
+  --lotus-size-18: 72px;
+  --lotus-size-19: 76px;
+  --lotus-size-20: 80px;
+  --lotus-size-21: 84px;
+  --lotus-size-22: 88px;
+  --lotus-size-23: 92px;
+  --lotus-size-24: 96px;
+  --lotus-size-25: 100px;
+  --lotus-size-26: 104px;
+  --lotus-size-27: 108px;
+  --lotus-size-28: 112px;
+  --lotus-size-29: 116px;
+  --lotus-size-30: 120px;
+  --lotus-size-31: 124px;
+  --lotus-size-32: 128px;
+  --lotus-size-33: 132px;
+  --lotus-size-34: 136px;
+  --lotus-size-35: 140px;
+  --lotus-size-36: 144px;
+  --lotus-size-37: 148px;
+  --lotus-size-38: 152px;
+  --lotus-size-39: 156px;
+  --lotus-size-40: 160px;
+  --lotus-size-41: 164px;
+  --lotus-size-42: 168px;
+  --lotus-size-43: 172px;
+  --lotus-size-44: 176px;
+  --lotus-size-45: 180px;
+  --lotus-size-46: 184px;
+  --lotus-size-47: 188px;
+  --lotus-size-48: 192px;
+  --lotus-size-49: 196px;
+  --lotus-size-50: 200px;
+
+  /* spacing */
+  --lotus-spacing-none: 0;
+  --lotus-spacing-1: 2px;
+  --lotus-spacing-2: 4px;
+  --lotus-spacing-3: 6px;
+  --lotus-spacing-4: 8px;
+  --lotus-spacing-5: 10px;
+  --lotus-spacing-6: 12px;
+  --lotus-spacing-7: 16px;
+  --lotus-spacing-8: 20px;
+  --lotus-spacing-9: 24px;
+  --lotus-spacing-10: 32px;
+  --lotus-spacing-11: 36px;
+  --lotus-spacing-12: 40px;
+  --lotus-spacing-13: 48px;
+  --lotus-spacing-14: 56px;
+  --lotus-spacing-15: 60px;
+  --lotus-spacing-16: 64px;
+  --lotus-spacing-17: 72px;
+  --lotus-spacing-18: 80px;
+  --lotus-spacing-19: 84px;
+  --lotus-spacing-20: 96px;
+  --lotus-spacing-21: 100px;
+  --lotus-spacing-22: 120px;
+
+  --lotus-color-transparent: transparent;
+
+  /* shadow */
+  --lotus-shadow-none: none;
+  --lotus-shadow-special: 0 0 1px rgba(0, 0, 0, 0.3);
+  --lotus-shadow1-center: 0 0 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-up: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-down: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-left: -2px 0 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-right: 2px 0 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-left-up: -2px -2px 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-left-down: -2px 2px 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-right-up: 2px -2px 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow1-right-down: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-center: 0 0 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-up: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-down: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-left: -4px 0 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-right: 4px 0 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-left-up: -4px -4px 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-left-down: -4px 4px 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-right-up: 4px -4px 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow2-right-down: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-center: 0 0 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-up: 0 -8px 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-down: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-left: -8px 0 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-right: 8px 0 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-left-up: -8px -8px 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-left-down: -8px 8px 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-right-up: 8px -8px 20px rgba(0, 0, 0, 0.1);
+  --lotus-shadow3-right-down: 8px 8px 20px rgba(0, 0, 0, 0.1);
+
+  /* opacity */
+  --lotus-opacity-none: 0;
+  --lotus-opacity-1: 10%;
+  --lotus-opacity-2: 20%;
+  --lotus-opacity-3: 30%;
+  --lotus-opacity-4: 40%;
+  --lotus-opacity-5: 50%;
+  --lotus-opacity-6: 60%;
+  --lotus-opacity-7: 70%;
+  --lotus-opacity-8: 80%;
+  --lotus-opacity-9: 90%;
+
+  /* fontSize */
+  --lotus-font-size-display-3: 56px;
+  --lotus-font-size-display-2: 48px;
+  --lotus-font-size-display-1: 36px;
+  --lotus-font-size-title-3: 24px;
+  --lotus-font-size-title-2: 20px;
+  --lotus-font-size-title-1: 16px;
+  --lotus-font-size-body-5: 18px;
+  --lotus-font-size-body-4: 16px;
+  --lotus-font-size-body-3: 14px;
+  --lotus-font-size-body-2: 13px;
+  --lotus-font-size-body-1: 12px;
+  --lotus-font-size-caption: 12px;
+
+  /* fontWeight */
+  --lotus-font-weight-100: 100;
+  --lotus-font-weight-200: 200;
+  --lotus-font-weight-300: 300;
+  --lotus-font-weight-400: 400;
+  --lotus-font-weight-500: 500;
+  --lotus-font-weight-600: 600;
+  --lotus-font-weight-700: 700;
+  --lotus-font-weight-800: 800;
+  --lotus-font-weight-900: 900;
+
+  /* fontSize */
+  --lotus-font-size-display-3: 56px;
+  --lotus-font-size-display-2: 48px;
+  --lotus-font-size-display-1: 36px;
+  --lotus-font-size-title-3: 24px;
+  --lotus-font-size-title-2: 20px;
+  --lotus-font-size-title-1: 16px;
+  --lotus-font-size-body-3: 14px;
+  --lotus-font-size-body-2: 13px;
+  --lotus-font-size-body-1: 12px;
+  --lotus-font-size-caption: 12px;
+
+  /* fontWeight */
+  --lotus-font-weight-100: 100;
+  --lotus-font-weight-200: 200;
+  --lotus-font-weight-300: 300;
+  --lotus-font-weight-400: 400;
+  --lotus-font-weight-500: 500;
+  --lotus-font-weight-600: 600;
+  --lotus-font-weight-700: 700;
+  --lotus-font-weight-800: 800;
+  --lotus-font-weight-900: 900;
+}

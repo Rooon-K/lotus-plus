@@ -1,0 +1,68 @@
+---
+search: false
+next:
+  link: /components/collapse
+  text: Collapse 折叠面板
+---
+
+## 基础用法
+使用 `type`、`size`、 `status`和 `shape`来定义按钮的样式。
+
+::: preview
+demo-preview=../demo/button/Basic.vue
+:::
+
+## 图标按钮
+
+## 按钮形状
+使用 `square`、`circle`、 `round`来定义按钮的形状。
+
+::: preview
+demo-preview=../demo/button/Shape.vue
+:::
+
+## 按钮状态
+使用 `normal`-正常(默认)、`success`、 `warning` 和 `danger`来定义按钮的状态。
+
+::: preview
+demo-preview=../demo/button/Status.vue
+:::
+
+## 按钮尺寸
+
+## 禁用状态
+<!-- 按钮的禁用状态。
+
+::: preview
+demo-preview=../demo/button/Disabled.vue
+::: -->
+
+## 加载中状态
+
+## Button API
+
+### Props
+
+| 参数名  | 描述     | 类型       | 默认值   |
+| ------ | -------- | ---------- | ------- |
+| size   | 按钮大小  | `Enum` - `"large" \| "default" \| "small"` | `"default"` |
+| type   | 按钮类型  | `Enum` - `"primary" \| "dashed" \| "outline" \| "text"` | — |
+| html-type   | 设置`button`的原生`type`属性  | `Enum` - `"button" \| "reset" \| "submit"` | "button" |
+| status   | 按钮状态  | `Enum` - `"normal" \| "success" \| "warning" \| "danger"` | "normal" |
+| shape   | 按钮形状  | `Enum` - `"square" \| "circle" \| "round"` | "square" |
+| icon   | 自定义图标  | `string \| Component` | — |
+| tag   | 自定义元素标签  | `string \| Component` | "button" |
+| disabled   | 是否禁用  | `Boolean` | false |
+| loading   | 是否加载中  | `Boolean` | false |
+| autofocus   | 是否自动聚焦  | `Boolean` | false |
+| useThrottle   | 是否开启节流模式  | `Boolean` | false |
+| throttleDuration   | 节流模式间隔  | `Number` | 500 |
+
+### Events
+| 事件名  | 描述      | 参数   |
+| ------ | -------- | ------- |
+| click   | 点击按钮时触发  | `(e: MouseEvent)` |
+### Slots
+| 插槽名  | 描述      | 参数   |
+| ------ | -------- | ------- |
+| icon   | 图标  | — |
