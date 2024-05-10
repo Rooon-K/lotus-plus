@@ -29,19 +29,27 @@ const emits = defineEmits<ButtonEmits>();
 const size = computed(() => props.size);
 const status = computed(() => props.status);
 const shape = computed(() => props.shape);
+const type = computed(() => props.type);
 const disabled = computed(() => props.disabled);
 const loading = computed(() => props.loading);
 const iconStyle = computed(() => ({
   marginRight: slots.default ? "6px" : "0px"
 }));
 const handleBtnClick = (e: MouseEvent) => {
-  if (disabled || loading) {
+  if (disabled.value || loading.value) {
     e.preventDefault();
     return;
   }
   emits("click", e);
 };
 const handleBtnCLickThrottle = throttle(handleBtnClick, props.throttleDuration);
+
+defineExpose({
+  ref: _ref,
+  disabled,
+  size,
+  type,
+});
 </script>
 
 <template>
@@ -66,7 +74,7 @@ const handleBtnCLickThrottle = throttle(handleBtnClick, props.throttleDuration);
       <slot name="loading">
         <l-icon
           class="loading-icon"
-          :icon="loadingIcon ?? 'spinner'"
+          :icon="props.loadingIcon ?? 'spinner'"
           :style="iconStyle"
           size="1x"
           spin
