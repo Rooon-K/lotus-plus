@@ -1,35 +1,43 @@
 ---
 search: false
 next:
-  link: /components/collapse
-  text: Collapse 折叠面板
+  link: /components/icon
+  text: Icon 图标
 ---
 
+# Button 按钮
+常用的操作按钮
+
 ## 基础用法
-使用 `type`、`size`、 `status`和 `shape`来定义按钮的样式。
+使用 `type` 、`size` 、 `status` 和 `shape` 来定义按钮的样式。
 
 ::: preview
 demo-preview=../demo/button/Basic.vue
 :::
 
 ## 图标按钮
+使用 `icon` 属性来定义按钮的图标。
+
+::: preview
+demo-preview=../demo/button/Icon.vue
+:::
 
 ## 按钮形状
-使用 `square`、`circle`、 `round`来定义按钮的形状。
+使用 `square` 、`circle` 、 `round` 来定义按钮的形状。
 
 ::: preview
 demo-preview=../demo/button/Shape.vue
 :::
 
 ## 按钮状态
-使用 `normal`-正常(默认)、`success`、 `warning` 和 `danger`来定义按钮的状态。
+使用 `normal` - 正常(默认) 、`success` 、 `warning` 和 `danger` 来定义按钮的状态。
 
 ::: preview
 demo-preview=../demo/button/Status.vue
 :::
 
 ## 按钮尺寸
-使用 `default`-正常(默认)、`small`、和 `large`来定义按钮的尺寸。
+使用 `default` - 正常(默认) 、`small` 、和 `large` 来定义按钮的尺寸。
 
 ::: preview
 demo-preview=../demo/button/Size.vue
@@ -42,8 +50,19 @@ demo-preview=../demo/button/Size.vue
 demo-preview=../demo/button/Disabled.vue
 :::
 
-## 加载中状态
+## 加载状态
+使用 `loading` 属性来定义按钮的加载状态。
 
+::: preview
+demo-preview=../demo/button/Loading.vue
+:::
+
+## 节流模式
+可以通过 `useThrottle` 属性来定义按钮是否使用节流模式 默认为 `false`, 通过 `throttleDuration` 调整间隔 默认为 500ms。
+
+::: preview
+demo-preview=../demo/button/UseThrottle.vue
+:::
 ## Button API
 
 ### Props

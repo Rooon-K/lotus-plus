@@ -1,5 +1,4 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <p>
@@ -12,7 +11,7 @@
   <p>
     <l-button>Square</l-button>
     <l-button shape="round">Round</l-button>
-    <l-button shape="circle">+</l-button>
+    <l-button shape="circle" icon="plus"></l-button>
   </p>
   <p>
     <l-button status="success">Default</l-button>
@@ -67,5 +66,22 @@
     <l-button size="small">Small</l-button>
     <l-button>Default</l-button>
     <l-button size="large">Large</l-button>
+  </p>
+  <p>
+    <l-button type="primary" icon="edit" />
+    <l-button type="primary" icon="share" />
+    <l-button type="primary" icon="trash" />
+    <l-button type="primary" icon="search">Search</l-button>
+    <l-button type="primary"> Upload<l-icon icon="upload" style="margin-left: 8px" /> </l-button>
+  </p>
+  <p>
+    <l-button type="primary" loading>Loading</l-button>
+    <l-button type="primary" loading-icon="circle-notch" loading>Loading</l-button>
+    <l-button type="primary" loading>
+      <template #loading>
+        <l-icon style="margin-right: 6px" icon="star" spin />
+      </template>
+      Loading
+    </l-button>
   </p>
 </template>

@@ -70,13 +70,13 @@
     background-color: var(--lotus-button-disabled-bg-color);
     border-color: var(--lotus-button-disabled-border-color);
   }
-  [class*="l-icon"] {
+  [class*="lotus-icon"] {
     width: 1em;
     height: 1em;
   }
   &.button-circle {
-    border-radius: var(--lotus-border-radius-full);
-    padding: 12px;
+    border-radius: 50%;
+    padding: 8px;
   }
   &.button-round {
     border-radius: var(--lotus-border-radius-round);
@@ -87,6 +87,10 @@
     padding: 12px 19px;
     font-size: var(--lotus-font-size-default);
     border-radius: var(--lotus-border-radius-default);
+    &.is-circle {
+      border-radius: 50%;
+      padding: 12px;
+    }
   }
   &.button-small {
     --lotus-button-size: 24px;
@@ -97,6 +101,10 @@
     &.button-circle {
       border-radius: 50%;
       padding: 5px;
+    }
+    [class*='lotus-icon'] {
+      width: 12px;
+      height: 12px;
     }
   }
   &.button-primary {

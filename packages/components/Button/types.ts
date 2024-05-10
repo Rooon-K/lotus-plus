@@ -18,6 +18,7 @@ export interface ButtonProps {
   loading?: boolean; // 是否加载中
   useThrottle?: boolean; // 是否开启节流模式
   throttleDuration?: number; // 节流模式间隔
+  loadingIcon?: string; // icon图标
   autofocus?: boolean; // 是否自动聚焦
 }
 

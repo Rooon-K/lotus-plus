@@ -1,0 +1,16 @@
+.lotus-icon {
+  --lotus-icon-color: inherit;
+  display: inline-flex;
+  justify-content: baseline;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--lotus-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary, success, warning, danger {
+  .lotus-icon--$(val) {
+    --lotus-icon-color: var(--color-$(val));
+  }
+}
