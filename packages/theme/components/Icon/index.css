@@ -1,7 +1,7 @@
 .lotus-icon {
   --lotus-icon-color: inherit;
   display: inline-flex;
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
   position: relative;
   fill: currentColor;
