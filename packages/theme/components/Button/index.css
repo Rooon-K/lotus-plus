@@ -81,6 +81,24 @@
   &.button-round {
     border-radius: var(--lotus-border-radius-round);
   }
+  &.button-large {
+    --lotus-button-size: 40px;
+    height: var(--lotus-button-size);
+    padding: 12px 19px;
+    font-size: var(--lotus-font-size-default);
+    border-radius: var(--lotus-border-radius-default);
+  }
+  &.button-small {
+    --lotus-button-size: 24px;
+    height: var(--lotus-button-size);
+    padding: 5px 11px;
+    font-size: var(--lotus-font-size-default);
+    border-radius: var(--lotus-border-radius-default);
+    &.button-circle {
+      border-radius: 50%;
+      padding: 5px;
+    }
+  }
   &.button-primary {
     --lotus-button-text-color: var(--color-text);
     --lotus-button-bg-color: var(--primary);
@@ -107,6 +125,7 @@
   &.button-outline:hover {
     --lotus-button-hover-text-color: var(--primary-hover);
     --lotus-button-hover-border-color: var(--primary-hover);
+    background-color: transparent;
   }
   &.button-text {
     background-color: transparent;
@@ -159,7 +178,8 @@
   }
   &.button-secondary,
   &.button-dashed,
-  &.button-outline {
+  &.button-outline,
+  &.button-text {
     @each $val in success, warning, danger {
       &.button-$(val) {
         --lotus-button-text-color: var(--$(val));
@@ -172,9 +192,9 @@
         --lotus-button-hover-border-color: var(--$(val)-hover);
         --lotus-button-active-bg-color: var(--$(val)-hover);
         --lotus-button-active-border-color: var(--$(val)-hover);
-        --lotus-button-disabled-text-color: var(--color-text);
-        --lotus-button-disabled-bg-color: var(--$(val)-disabled);
-        --lotus-button-disabled-border-color: var(--$(val)-hover-light);
+        --lotus-button-disabled-text-color: var(--color-$(val)-light-3);
+        --lotus-button-disabled-bg-color: var(--color-$(val)-light-1);
+        --lotus-button-disabled-border-color: var(--color-$(val)-light-2);
       }
       &.button-$(val) + .button-dashed {
         border-style: dashed;
@@ -193,9 +213,15 @@
         border-color: transparent;
         --lotus-button-text-color: var(--$(val));
       }
+      
+      &.button-$(val) + .button-text + &.is-disabled {
+        background-color: transparent;
+        border-color: transparent;
+        color: var(--color-$(val)-light-3);
+      }
       &.button-$(val) + .button-text:hover {
         background-color: var(--color-fill-hover);
-        color: var(--$(val));
+        color: var(--color-$(val)-light-3);
       }
     }
   }

@@ -63,4 +63,9 @@
     <l-button disabled type="outline" status="danger">Outline</l-button>
     <l-button disabled type="text" status="danger">Text</l-button>
   </p>
+  <p>
+    <l-button size="small">Small</l-button>
+    <l-button>Default</l-button>
+    <l-button size="large">Large</l-button>
+  </p>
 </template>

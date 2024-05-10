@@ -43,15 +43,15 @@ const handleBtnCLickThrottle = throttle(handleBtnClick, props.throttleDuration);
     :disabled="disabled"
     :autofocus="autofocus"
     @click="(e:MouseEvent) => (useThrottle ? handleBtnCLickThrottle(e) : handleBtnClick(e))"
+    class="lotus-button"
     :class="{
+      'is-disabled': disabled,
+      [`button-${type}`]: type,
       [`button-${shape}`]: shape,
       [`button-${size}`]: size,
       [`button-${status}`]: status,
-      [`button-${type}`]: type,
       'is-loading': loading,
-      'is-disabled': disabled
     }"
-    class="lotus-button"
   >
     <template v-if="loading">
       <slot name="loading"></slot>

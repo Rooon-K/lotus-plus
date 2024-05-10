@@ -29,13 +29,18 @@ demo-preview=../demo/button/Status.vue
 :::
 
 ## 按钮尺寸
+使用 `default`-正常(默认)、`small`、和 `large`来定义按钮的尺寸。
+
+::: preview
+demo-preview=../demo/button/Size.vue
+:::
 
 ## 禁用状态
-<!-- 按钮的禁用状态。
+按钮的禁用状态。
 
 ::: preview
 demo-preview=../demo/button/Disabled.vue
-::: -->
+:::
 
 ## 加载中状态
 
