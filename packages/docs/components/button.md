@@ -63,7 +63,7 @@ demo-preview=../demo/button/Loading.vue
 ::: preview
 demo-preview=../demo/button/UseThrottle.vue
 :::
-## Button API
+## API
 
 ### Props
 

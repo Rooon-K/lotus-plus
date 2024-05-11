@@ -10,7 +10,7 @@
 }
 
 @each $val in primary, success, warning, danger {
-  .lotus-icon--$(val) {
-    --lotus-icon-color: var(--color-$(val));
+  .lotus-icon-$(val) {
+    --lotus-icon-color: var(--$(val));
   }
 }
