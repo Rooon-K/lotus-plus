@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, inject, ref } from "vue";
 import { throttle } from "lodash-es";
 import type { ButtonProps, ButtonEmits } from "./types";
 import { LIcon } from "../Icon";
+import { BUTTON_GROUP_CTX_KEY } from "./constance";
 
 defineOptions({
   name: "LButton"
@@ -25,12 +26,13 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 const slots = defineSlots();
 const _ref = ref<HTMLButtonElement>();
 const emits = defineEmits<ButtonEmits>();
+const buttonGroupCtx = inject(BUTTON_GROUP_CTX_KEY, void 0);
 
-const size = computed(() => props.size);
-const status = computed(() => props.status);
+const size = computed(() => buttonGroupCtx?.size ?? props.size ?? "");
+const type = computed(() => buttonGroupCtx?.type ?? props.type ?? "");
+const disabled = computed(() => buttonGroupCtx?.disabled || props.disabled || false);
+const status = computed(() => buttonGroupCtx?.status ?? props.status ?? "");
 const shape = computed(() => props.shape);
-const type = computed(() => props.type);
-const disabled = computed(() => props.disabled);
 const loading = computed(() => props.loading);
 const iconStyle = computed(() => ({
   marginRight: slots.default ? "6px" : "0px"
@@ -48,7 +50,7 @@ defineExpose({
   ref: _ref,
   disabled,
   size,
-  type,
+  type
 });
 </script>
 

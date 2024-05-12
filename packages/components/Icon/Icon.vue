@@ -15,7 +15,12 @@ const customStyles = computed(() => ({ color: props.color ?? void 0 }));
 </script>
 
 <template>
-  <i class="lotus-icon" :class="[`lotus-icon-${props.type}`]" :style="customStyles" v-bind="$attrs">
+  <i
+    class="lotus-icon"
+    :class="{ [`lotus-icon-${props.type}`]: props.type }"
+    :style="customStyles"
+    v-bind="$attrs"
+  >
     <font-awesome-icon v-bind="filterProps"></font-awesome-icon>
   </i>
 </template>

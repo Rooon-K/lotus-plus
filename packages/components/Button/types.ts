@@ -22,6 +22,20 @@ export interface ButtonProps {
   autofocus?: boolean; // 是否自动聚焦
 }
 
+export interface ButtonGroupProps {
+  size?: ButtonSize;
+  type?: ButtonType;
+  disabled?: boolean;
+  status?: ButtonStatus;
+}
+
+export interface ButtonGroupContext {
+  size?: ButtonSize;
+  type?: ButtonType;
+  disabled?: boolean;
+  status?: ButtonStatus;
+}
+
 export interface ButtonEmits {
   (e: "click", value: MouseEvent): void;
 }

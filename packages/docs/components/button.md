@@ -43,6 +43,13 @@ demo-preview=../demo/button/Status.vue
 demo-preview=../demo/button/Size.vue
 :::
 
+## 按钮组
+使用 `<l-button-group>` 对多个按钮分组。
+
+::: preview
+demo-preview=../demo/button/ButtonGroup.vue
+:::
+
 ## 禁用状态
 按钮的禁用状态。
 
