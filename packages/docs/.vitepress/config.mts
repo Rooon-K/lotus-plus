@@ -24,7 +24,8 @@ export default defineConfig({
         text: "基础组件",
         items: [
           { text: "Button 按钮", link: "components/button" },
-          { text: "Icon 图标", link: "components/icon" }
+          { text: "Icon 图标", link: "components/icon" },
+          { text: "Layout 布局", link: "components/layout" },
         ]
       }
     ],
