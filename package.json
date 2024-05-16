@@ -14,15 +14,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
     "@lotus-plus/components": "workspace:*",
     "@lotus-plus/hooks": "workspace:*",
     "@lotus-plus/theme": "workspace:*",
     "@lotus-plus/utils": "workspace:*",
-    "@fortawesome/fontawesome-svg-core": "^6.5.2",
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/vue-fontawesome": "^3.0.6",
-    "lotus-plus": "workspace:*",
     "lodash-es": "^4.17.21",
+    "lotus-plus": "workspace:*",
     "vue": "^3.4.26"
   },
   "devDependencies": {

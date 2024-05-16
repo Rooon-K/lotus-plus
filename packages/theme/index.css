@@ -2,6 +2,8 @@
 /* @import "./reset.css"; */
 @import "./components/Button/index.css";
 @import "./components/Icon/index.css";
+@import "./components/Col/index.css";
+@import "./components/Row/index.css";
 @import "./colors.css";
 @import "./dark.css";
 

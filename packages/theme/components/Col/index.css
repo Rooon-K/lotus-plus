@@ -1,0 +1,29 @@
+.lotus-col {
+  box-sizing: border-box;
+
+  @for $i from 0 to 24 {
+    &.lotus-col-$(i) {
+      @if $i === 0 {
+        display: none;
+      } @else {
+        display: block;
+      }
+      max-width: calc(($i * 100% / 24));
+      flex: 0 0 calc(($i * 100% / 24));
+    }
+
+    &.lotus-col-offset-$(i) {
+      margin-left: calc(($i * 100% / 24));
+    }
+
+    &.lotus-col-pull-$(i) {
+      position: relative;
+      right: calc(($i * 100% / 24));
+    }
+
+    &.lotus-col-push-$(i) {
+      position: relative;
+      left: calc(($i * 100% / 24));
+    }
+  }
+}

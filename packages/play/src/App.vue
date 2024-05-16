@@ -2,20 +2,10 @@
 
 <template>
   <div>
-    <l-button status="success">Previous Page</l-button>
-
-    <l-button-group>
-      <l-button type="primary" icon="arrow-left">Previous Page</l-button>
-      <l-button type="primary">
-        Next Page<l-icon icon="arrow-right" style="margin-left: 8px" />
-      </l-button>
-    </l-button-group>
-  </div>
-  <div>
-    <l-button-group type="primary" size="small">
-      <l-button status="warning" icon="edit" />
-      <l-button status="warning" icon="share" />
-      <l-button status="warning" icon="trash" />
-    </l-button-group>
+    <l-row justify="center" :gutter="20">
+      <l-col :span="8" :offset="2">1</l-col>
+      <l-col :span="6">2</l-col>
+      <l-col :span="8">3</l-col>
+    </l-row>
   </div>
 </template>
