@@ -8,5 +8,5 @@ library.add(fas);
 
 const installer = makeInstaller(components);
 
-export * from "@lotus-plus/components";
+export * from "../components";
 export default installer;

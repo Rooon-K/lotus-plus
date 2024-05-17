@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ButtonGroupProps } from "lotus-plus";
+import type { ButtonGroupProps } from "./types";
 import { BUTTON_GROUP_CTX_KEY } from "./constance";
 import { provide, reactive, toRef } from "vue";
 
