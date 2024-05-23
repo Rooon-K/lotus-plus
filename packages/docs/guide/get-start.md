@@ -1,8 +1,8 @@
 ---
 search: false
 next:
-  link: /guide/dark-mode
-  text: 暗黑模式
+  link: /guide/light-mode
+  text: 浅色模式
 ---
 # 快速上手
 跟随以下步骤, 快速上手组件库的使用

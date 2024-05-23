@@ -17,8 +17,9 @@ export default defineConfig({
       {
         text: "开发指南",
         items: [
-          { text: "快速开始", link: "guide/get-start" }
-          // { text: "暗黑模式", link: "guide/dark-mode" },
+          { text: "快速开始", link: "guide/get-start" },
+          { text: "浅色模式", link: "guide/light-mode" },
+          { text: "暗黑模式", link: "guide/dark-mode" }
         ]
       },
       {
@@ -26,7 +27,7 @@ export default defineConfig({
         items: [
           { text: "Button 按钮", link: "components/button" },
           { text: "Icon 图标", link: "components/icon" },
-          { text: "Layout 布局", link: "components/layout" },
+          { text: "Layout 布局", link: "components/layout" }
         ]
       }
     ],

@@ -1,9 +1,7 @@
 import DefaultTheme from "vitepress/theme";
 import { type App } from "vue";
-import LotusPlus from "lotus-plus";
+import LotusPlus from "../../../core/index";
 import { ElementPlusContainer } from "@vitepress-demo-preview/component";
-import "lotus-plus/dist/index.css";
-
 import "@vitepress-demo-preview/component/dist/style.css";
 
 export default {

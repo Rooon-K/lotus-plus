@@ -45,7 +45,15 @@
   "peerDependencies": {
     "vue": "^3.4.19"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "vue3",
+    "Components",
+    "library",
+    "TS",
+    "Vue3",
+    "Lotus-Plus"
+  ],
+  "author": "Rooon-K",
+  "license": "ISC",
+  "readme": "README.md"
 }
