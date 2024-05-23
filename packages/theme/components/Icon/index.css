@@ -9,8 +9,8 @@
   font-size: inherit;
 }
 
-@each $val in primary, success, warning, danger {
+@each $val in primary, success, warning, danger, normal {
   .lotus-icon-$(val) {
-    --lotus-icon-color: var(--$(val));
+    --lotus-icon-color: var(--$(val)-color);
   }
 }

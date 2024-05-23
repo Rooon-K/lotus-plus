@@ -1,0 +1,76 @@
+:root {
+  /* 主色   */
+  --primary-color: #165dff;
+  --primary-hover-color: #4080ff;
+  --primary-click-color: #0e42d2;
+  --primary-special-color: #6aa1ff;
+  --primary-active-color: #94bfff;
+  --primary-disabled-color: #bedaff;
+  --primary-light-color: #e8f3ff;
+  --primary-hover-light-color: #bedaff;
+  --primary-disabled-light-color: #94bfff;
+
+  /* Normal & Secondary */
+  --normal-color: #86909c;
+  --normal-hover-color: #a9aeb8;
+  --normal-click-color: #6b7785;
+  --normal-special-color: #c9cdd4;
+  --normal-active-color: #e5e6eb;
+  --normal-disabled-color: #f2f3f5;
+  --normal-light-color: #f7f8fa;
+  --normal-hover-light-color: #f2f3f5;
+  --normal-disabled-light-color: #e5e6eb;
+
+  /* Success */
+  --success-color: #00b42a;
+  --success-hover-color: #23c343;
+  --success-click-color: #009a29;
+  --success-special-color: #4cd263;
+  --success-active-color: #7be188;
+  --success-disabled-color: #aff0b5;
+  --success-light-color: #e8ffea;
+  --success-hover-light-color: #aff0b5;
+  --success-disabled-light-color: #7be188;
+
+  /* Warning */
+  --warning-color: #ff7d00;
+  --warning-hover-color: #ff9a2e;
+  --warning-click-color: #d25f00;
+  --warning-special-color: #ffb65d;
+  --warning-active-color: #ffcf8b;
+  --warning-disabled-color: #ffe4ba;
+  --warning-light-color: #fff7e8;
+  --warning-hover-light-color: #ffe4ba;
+  --warning-disabled-light-color: #ffcf8b;
+
+  /* Danger */
+  --danger-color: #f53f3f;
+  --danger-hover-color: #f76560;
+  --danger-click-color: #cb272d;
+  --danger-special-color: #f98981;
+  --danger-active-color: #fbaca3;
+  --danger-disabled-color: #fdcdc5;
+  --danger-light-color: #ffece8;
+  --danger-hover-light-color: #fdcdc5;
+  --danger-disabled-light-color: #fbaca3;
+
+  /* Border */
+  --border-color: #e5e6eb;
+  --border-hover-color: #c9cdd4;
+  --border-disabled-color: #f2f3f5;
+  --border-heavey-color: #86909c;
+
+  /* BackgroundColor */
+  --bg-color: #f2f3f5;
+  --bg-hover-color: #e5e6eb;
+  --bg-disabled-color: #f7f8fa;
+  --bg-heavey-color: #c9cdd4;
+
+  /* TextColor */
+  --text-color-1: #1d2129;
+  --text-color-2: #4e5969;
+  --text-color-3: #86909c;
+  --text-color-4: #c9cdd4;
+  --text-color-5: #ffffff;
+  --text-disabled-color: #ffffff;
+}

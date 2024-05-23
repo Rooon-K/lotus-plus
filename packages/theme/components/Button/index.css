@@ -1,23 +1,23 @@
 .lotus-button {
   --lotus-button-font-weight: var(--lotus-font-weight-400);
-  --lotus-button-border-color: var(--color-border-normal);
-  --lotus-button-bg-color: var(--color-fill-normal);
-  --lotus-button-text-color: var(--color-text-normal);
-  --lotus-button-disabled-text-color: var(--color-text-disabled);
-  --lotus-button-disabled-bg-color: var(--color-fill-disabled);
-  --lotus-button-disabled-border-color: var(--color-border-disabled);
-  --lotus-button-hover-text-color: var(--color-text-hover);
-  --lotus-button-hover-bg-color: var(--color-fill-hover);
-  --lotus-button-hover-border-color: var(--color-border-hover);
-  --lotus-button-active-text-color: var(--color-text-hover);
-  --lotus-button-active-border-color: var(--color-border-hover);
-  --lotus-button-active-bg-color: var(--color-fill-hover);
-  --lotus-button-outline-color: var(--primary-hover);
-  --lotus-button-active-color: var(--primary);
+  --lotus-button-border-color: var(--border-color);
+  --lotus-button-bg-color: var(--bg-color);
+  --lotus-button-text-color: var(--text-color-2);
+  --lotus-button-disabled-text-color: var(--text-color-4);
+  --lotus-button-disabled-bg-color: var(--bg-disabled-color);
+  --lotus-button-disabled-border-color: var(--border-disabled-color);
+  --lotus-button-hover-text-color: var(--text-color-1);
+  --lotus-button-hover-bg-color: var(--bg-hover-color);
+  --lotus-button-hover-border-color: var(--border-hover-color);
+  --lotus-button-active-text-color: var(--text-color-1);
+  --lotus-button-active-border-color: var(--border-hover-color);
+  --lotus-button-active-bg-color: var(--bg-hover-color);
+  --lotus-button-outline-color: var(--primary-hover-color);
+  --lotus-button-active-color: var(--primary-color);
 }
 
 .lotus-button-group {
-  --lotus-button-group-border-color: var(--color-border-normal);
+  --lotus-button-group-border-color: var(--border-color);
 }
 
 .lotus-button {
@@ -106,85 +106,87 @@
       border-radius: 50%;
       padding: 5px;
     }
-    [class*='lotus-icon'] {
+    [class*="lotus-icon"] {
       width: 12px;
       height: 12px;
     }
   }
   &.button-primary {
-    --lotus-button-text-color: var(--color-text);
-    --lotus-button-bg-color: var(--primary);
-    --lotus-button-border-color: var(--primary);
-    --lotus-button-outline-color: var(--primary-hover-light);
-    --lotus-button-active-color: var(--primary-hover);
-    --lotus-button-hover-text-color: var(--color-text);
-    --lotus-button-hover-bg-color: var(--primary-hover);
-    --lotus-button-hover-border-color: var(--primary-hover);
-    --lotus-button-active-bg-color: var(--primary-hover);
-    --lotus-button-active-border-color: var(--primary-hover);
-    --lotus-button-disabled-text-color: var(--color-text);
-    --lotus-button-disabled-bg-color: var(--primary-disabled);
-    --lotus-button-disabled-border-color: var(--primary-hover-light);
+    --lotus-button-text-color: var(--text-color-5);
+    --lotus-button-bg-color: var(--primary-color);
+    --lotus-button-border-color: var(--primary-color);
+    --lotus-button-outline-color: var(--primary-hover-color);
+    --lotus-button-active-color: var(--primary-hover-color);
+    --lotus-button-hover-text-color: var(--text-color-1);
+    --lotus-button-hover-bg-color: var(--primary-hover-color);
+    --lotus-button-hover-border-color: var(--primary-hover-color);
+    --lotus-button-active-bg-color: var(--primary-hover-color);
+    --lotus-button-active-border-color: var(--primary-hover-color);
+    --lotus-button-disabled-text-color: var(--text-disabled-color);
+    --lotus-button-disabled-bg-color: var(--primary-disabled-light-color);
+    --lotus-button-disabled-border-color: var(--primary-disabled-light-color);
   }
   &.button-dashed {
     border-style: dashed;
   }
   &.button-outline {
-    --lotus-button-text-color: var(--primary-hover);
-    --lotus-button-border-color: var(--primary-hover);
+    --lotus-button-text-color: var(--primary-color);
+    --lotus-button-border-color: var(--primary-color);
     background-color: transparent;
   }
   &.button-outline:hover {
-    --lotus-button-hover-text-color: var(--primary-hover);
-    --lotus-button-hover-border-color: var(--primary-hover);
+    --lotus-button-hover-text-color: var(--primary-hover-color);
+    --lotus-button-hover-border-color: var(--primary-hover-color);
     background-color: transparent;
   }
   &.button-text {
     background-color: transparent;
     border-color: transparent;
-    --lotus-button-text-color: var(--primary);
+    --lotus-button-text-color: var(--primary-color);
   }
   &.button-text:hover {
-    background-color: var(--color-fill-hover);
-    --lotus-button-hover-text-color: var(--primary-hover);
+    background-color: var(--bg-color);
+    --lotus-button-hover-text-color: var(--primary-hover-color);
   }
   &.button-primary {
     @each $val in success, warning, danger {
       &.button-$(val) {
-        --lotus-button-text-color: var(--color-text);
-        --lotus-button-bg-color: var(--$(val));
-        --lotus-button-border-color: var(--$(val));
-        --lotus-button-outline-color: var(--$(val)-hover);
-        --lotus-button-active-color: var(--$(val)-hover);
-        --lotus-button-hover-text-color: var(--color-text);
-        --lotus-button-hover-bg-color: var(--$(val));
-        --lotus-button-hover-border-color: var(--$(val)-hover);
-        --lotus-button-active-bg-color: var(--$(val)-hover);
-        --lotus-button-active-border-color: var(--$(val)-hover);
-        --lotus-button-disabled-text-color: var(--color-text);
-        --lotus-button-disabled-bg-color: var(--$(val)-disabled);
-        --lotus-button-disabled-border-color: var(--$(val)-hover-light);
+        --lotus-button-text-color: var(--text-color-5);
+        --lotus-button-bg-color: var(--$(val)-color);
+        --lotus-button-border-color: var(--$(val)-color);
+        --lotus-button-outline-color: var(--$(val)-hover-color);
+        --lotus-button-active-color: var(--$(val)-hover-color);
+        --lotus-button-hover-text-color: var(--text-color-1);
+        --lotus-button-hover-bg-color: var(--$(val)-hover-color);
+        --lotus-button-hover-border-color: var(--$(val)-hover-color);
+        --lotus-button-active-bg-color: var(--$(val)-hover-color);
+        --lotus-button-active-border-color: var(--$(val)-hover-color);
+        --lotus-button-disabled-text-color: var(--text-disabled-color);
+        --lotus-button-disabled-bg-color: var(--$(val)-disabled-light-color);
+        --lotus-button-disabled-border-color: var(--$(val)-disabled-light-color);
       }
-      &.button-$(val) + .button-dashed {
-        border-style: dashed;
+      &.button-$(val) {
+        &.button-dashed {
+          border-style: dashed;
+        }
       }
       &.button-$(val) + .button-outline {
-        --lotus-button-text-color: var(--$(val));
-        --lotus-button-border-color: var(--$(val));
+        --lotus-button-text-color: var(--$(val)-color);
+        --lotus-button-border-color: var(--$(val)-color);
         background-color: transparent;
       }
       &.button-$(val) + .button-outline:hover {
-        --lotus-button-hover-text-color: var(--$(val)-hover);
-        --lotus-button-hover-border-color: var(--$(val)-hover);
+        --lotus-button-hover-text-color: var(--$(val)-hover-color);
+        --lotus-button-hover-border-color: var(--$(val)-hover-color);
       }
       &.button-$(val) + .button-text {
         background-color: transparent;
         border-color: transparent;
-        --lotus-button-text-color: var(--$(val));
+        --lotus-button-text-color: var(--$(val)-color);
       }
       &.button-$(val) + .button-text:hover {
-        background-color: var(--color-fill-hover);
-        --lotus-button-hover-text-color: var(--$(val)-hover);
+        background-color: var(--bg-color);
+        --lotus-button-hover-text-color: var(--$(val)-hover-color);
       }
     }
   }
@@ -195,45 +197,47 @@
     @each $val in success, warning, danger {
       &.button-$(val) {
         --lotus-button-text-color: var(--$(val));
-        --lotus-button-bg-color: var(--color-$(val)-light-1);
-        --lotus-button-border-color: var(--$(val));
-        --lotus-button-outline-color: var(--$(val)-hover-light);
-        --lotus-button-active-color: var(--$(val)-hover);
-        --lotus-button-hover-text-color: var(--$(val));
-        --lotus-button-hover-bg-color: var(--color-$(val)-light-2);
+        --lotus-button-bg-color: var(--$(val)-light-color);
+        --lotus-button-border-color: var(--$(val)-light-color);
+        --lotus-button-outline-color: var(--$(val)-light-color);
+        --lotus-button-active-color: var(--$(val)-hover-color);
+        --lotus-button-hover-text-color: var(--$(val)-color);
+        --lotus-button-hover-bg-color: var(--$(val)-hover-light-color);
         --lotus-button-hover-border-color: var(--$(val)-hover);
         --lotus-button-active-bg-color: var(--$(val)-hover);
         --lotus-button-active-border-color: var(--$(val)-hover);
-        --lotus-button-disabled-text-color: var(--color-$(val)-light-3);
-        --lotus-button-disabled-bg-color: var(--color-$(val)-light-1);
-        --lotus-button-disabled-border-color: var(--color-$(val)-light-2);
+        --lotus-button-disabled-text-color: var(--$(val)-disabled-light-color);
+        --lotus-button-disabled-bg-color: var(--$(val)-light-color);
+        --lotus-button-disabled-border-color: var(--color-$(val)-hover-light-color);
       }
-      &.button-$(val) + .button-dashed {
-        border-style: dashed;
+      &.button-$(val) {
+        &.button-dashed {
+          --lotus-button-border-color: var(--$(val)-color);
+          border-style: dashed;
+        }
       }
       &.button-$(val) + .button-outline {
-        --lotus-button-text-color: var(--$(val));
-        --lotus-button-border-color: var(--$(val));
+        --lotus-button-text-color: var(--$(val)-color);
+        --lotus-button-border-color: var(--$(val)-color);
         background-color: transparent;
       }
       &.button-$(val) + .button-outline:hover {
-        --lotus-button-text-color: var(--$(val)-hover);
-        --lotus-button-border-color: var(--$(val)-hover);
+        --lotus-button-text-color: var(--$(val)-hover-color);
+        --lotus-button-border-color: var(--$(val)-hover-color);
       }
       &.button-$(val) + .button-text {
         background-color: transparent;
         border-color: transparent;
-        --lotus-button-text-color: var(--$(val));
+        --lotus-button-text-color: var(--$(val)-color);
       }
-      
       &.button-$(val) + .button-text + &.is-disabled {
         background-color: transparent;
         border-color: transparent;
-        color: var(--color-$(val)-light-3);
+        color: var(--$(val)-disabled-light-color);
       }
       &.button-$(val) + .button-text:hover {
-        background-color: var(--color-fill-hover);
-        color: var(--color-$(val)-light-3);
+        background-color: var(--bg-color);
+        color: var(--$(val)-disabled-light-color);
       }
     }
   }
@@ -250,14 +254,14 @@
     float: left;
     position: relative;
     margin-right: 0;
-    &:first-child{
+    &:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-right-color: var(--lotus-button-group-border-color);
     }
-    &:last-child{
+    &:last-child {
       border-top-left-radius: 0;
-      border-bottom-left-radius: 0; 
+      border-bottom-left-radius: 0;
       margin-left: 0;
       border-left-color: var(--lotus-button-group-border-color);
     }
@@ -275,7 +279,7 @@
       border-bottom-right-radius: var(--lotus-border-radius-base);
       border-top-left-radius: var(--lotus-border-radius-base);
       border-bottom-left-radius: var(--lotus-border-radius-base);
-      
+
       &.button-round {
         border-radius: var(--lotus-border-radius-round);
       }
