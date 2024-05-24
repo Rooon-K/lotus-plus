@@ -21,4 +21,4 @@
 
 ## 开始使用
 
-- 访问 [Lotus-plus (lotus-plus.rooon-k.top)](http://lotus-plus.rooon-k.top) 了解更多信息。
+- 访问 [Lotus-plus (国内)](https://lotus-plus.rooon-k.top)、[Lotus-plus (github pages)](https://rooon-k.github.io/lotus-plus/)、[github](https://github.com/Rooon-K/lotus-plus) 了解更多信息。

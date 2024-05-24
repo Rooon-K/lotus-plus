@@ -1,0 +1,64 @@
+.lotus-collapse {
+  --lotus-collapse-border-color: var(--border-color);
+  --lotus-collapse-header-height: 48px;
+  --lotus-collapse-header-bg-color: var(--bg-header-color);
+  --lotus-collapse-header-text-color: var(--text-color-2);
+  --lotus-collapse-header-font-size: 13px;
+  --lotus-collapse-content-bg-color: var(--bg-color);
+  --lotus-collapse-content-font-size: 13px;
+  --lotus-collapse-content-text-color: var(--text-color-2);
+  --lotus-collapse-disabled-text-color: var(--text-color-4);
+  --lotus-collapse-disabled-border-color: var(--border-disabled-color);
+  border: 1px solid var(--lotus-collapse-border-color);
+}
+
+.lotus-collapse-item {
+  .lotus-collapse-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: var(--lotus-collapse-header-height);
+    line-height: var(--lotus-collapse-header-height);
+    background-color: var(--lotus-collapse-header-bg-color);
+    color: var(--lotus-collapse-header-text-color);
+    font-size: var(--lotus-collapse-header-font-size);
+    cursor: pointer;
+    font-weight: 500;
+    transition: border-botton-color var(--lotus-transition-duration);
+    outline: none;
+    border-bottom: 1px solid var(--lotus-collapse-border-color);
+    &.is-disabled {
+      color: var(--lotus-collapse-disabled-text-color);
+      border-bottom-color: var(--lotus-collapse-disabled-border-color);
+      cursor: not-allowed;
+    }
+    &.is-active {
+      border-bottom-color: transparent;
+      .lotus-collapse-item__icon {
+        transform: rotate(90deg);
+      }
+    }
+    .lotus-collapse-item__icon {
+      transition: transform var(--lotus-transition-duration);
+    }
+  }
+  .lotus-collapse-item__content {
+    will-change: height;
+    background-color: var(--lotus-collapse-content-bg-color);
+    color: var(--lotus-collapse-content-text-color);
+    font-size: var(--lotus-collapse-content-font-size);
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-bottom: 16px;
+    padding: 0 16px;
+  }
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: height var(--lotus-transition-duration) ease-in-out;
+  }
+}
+
+.lotus-collapse-item:last-child .lotus-collapse-item__header {
+  border-bottom: none;
+}
