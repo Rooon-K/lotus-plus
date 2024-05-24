@@ -4,6 +4,7 @@
 @import "./components/Icon/index.css";
 @import "./components/Col/index.css";
 @import "./components/Row/index.css";
+@import "./components/Collapse/index.css";
 @import "./dark.css";
 @import "./light.css";
 
@@ -24,4 +25,8 @@
   --lotus-font-size-default: var(--lotus-font-size-body-3);
   --lotus-font-size-medium: var(--lotus-font-size-body-4);
   --lotus-font-size-large: var(--lotus-font-size-body-4);
+
+  /* transition */
+  --lotus-transition-duration: 0.4s;
+  --lotus-transition-duration-fast: 0.2s;
 }
