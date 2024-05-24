@@ -1,13 +1,19 @@
 import { defineConfig } from "vitepress";
 import { containerPreview, componentPreview } from "@vitepress-demo-preview/plugin";
 
-// https://vitepress.dev/reference/site-config
+const startYear = 2024;
+const nowYear = new Date().getFullYear();
+
 export default defineConfig({
   title: "Lotuts-Plus",
   description: "一个 vue3 组件库",
   base: "/lotus-plus/",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    footer: {
+      message: "鲁ICP备2024093316号",
+      copyright: `Copyright © ${startYear}${nowYear === startYear ? "" : "-" + nowYear} Rooon-K`
+    },
+
     nav: [
       { text: "开始使用", link: "/guide/get-start" },
       { text: "组件", link: "/components/button" }
@@ -28,6 +34,12 @@ export default defineConfig({
           { text: "Button 按钮", link: "components/button" },
           { text: "Icon 图标", link: "components/icon" },
           { text: "Layout 布局", link: "components/layout" }
+        ]
+      },
+      {
+        text: "数据展示",
+        items: [
+          { text: "Collapse 折叠面板", link: "components/collapse" },
         ]
       }
     ],
