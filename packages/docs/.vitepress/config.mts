@@ -5,7 +5,7 @@ const startYear = 2024;
 const nowYear = new Date().getFullYear();
 
 export default defineConfig({
-  title: "Lotuts-Plus",
+  title: "Lotus-Plus",
   description: "一个 vue3 组件库",
   base: "/lotus-plus/",
   themeConfig: {
