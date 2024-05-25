@@ -1,8 +1,8 @@
 ---
 search: false
 next:
-  link: /components/collapse
-  text: Collapse 折叠面板
+  link: /components/link
+  text: Link 链接
 ---
 
 # Layout 布局

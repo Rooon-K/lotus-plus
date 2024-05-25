@@ -52,7 +52,7 @@ html.dark {
   --danger-disabled-color: #770611;
   --danger-light-color: rgba(247, 105, 101, 0.2);
   --danger-hover-light-color: rgba(247, 105, 101, 0.35);
-  --danger-disabled-light-color: rgba(247, 105, 101, 0.35);
+  --danger-disabled-light-color: rgba(247, 105, 101, 0.5);
 
   /* Border */
   --border-color: #484849;

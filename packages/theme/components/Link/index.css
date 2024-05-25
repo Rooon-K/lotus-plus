@@ -1,0 +1,51 @@
+a {
+  &.lotus-link {
+    --lotus-link-text-color: var(--primary-color);
+    --lotus-link-hover-text-color: var(--primary-hover-color);
+    --lotus-link-disabled-text-color: var(--primary-disabled-light-color);
+    --lotus-link-bg-color: var(--bg-color);
+    --lotus-link-hover-bg-color: var(--bg-hover-color);
+    --lotus-link-disabled-bg-color: var(--bg-disabled-color);
+    --lotus-link-font-size: 14px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    transition: 0.1s;
+    cursor: pointer;
+    padding: 2px 3px;
+    color: var(--lotus-link-text-color);
+    line-height: 1.5715;
+    
+    &.lotus-link--disabled,
+    &.lotus-link--loading {
+      color: var(--lotus-link-disabled-text-color);
+      cursor: not-allowed;
+    }
+  
+    &.lotus-link--disabled:hover,
+    &.lotus-link--loading:hover {
+      color: var(--lotus-link-disabled-text-color);
+      background-color: transparent;
+    }
+  
+    @each $val in success, warning, danger {
+  
+     &.lotus-link--$(val) {
+        --lotus-link-text-color: var(--$(val)-color);
+        --lotus-link-hover-text-color: var(--$(val)-hover-color);
+        --lotus-link-disabled-text-color: var(--$(val)-disabled-color);
+      }
+    }
+  }
+  
+  &.lotus-link:hover {
+    color: var(--lotus-link-hover-text-color);
+    background-color: var(--lotus-link-hover-bg-color);
+  }
+  
+}

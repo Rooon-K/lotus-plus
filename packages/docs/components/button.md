@@ -108,6 +108,6 @@ demo-preview=../demo/button/UseThrottle.vue
 
 ### Slots
 
-| 插槽名 | 描述 | 参数 |
-| ------ | ---- | ---- |
-| icon   | 图标 | —    |
+| 插槽名  | 描述     |
+| ------- | -------- |
+| default | 默认插槽 |
