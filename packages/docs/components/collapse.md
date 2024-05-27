@@ -1,8 +1,8 @@
 ---
 search: false
 next:
-  link: /components/collapse
-  text: Dropdown 下拉菜单
+  link: /components/message
+  text: Message 消息提示
 ---
 
 # Collapse 折叠面板

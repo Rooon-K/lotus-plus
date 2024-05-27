@@ -42,6 +42,12 @@ export default defineConfig({
         items: [
           { text: "Collapse 折叠面板", link: "components/collapse" },
         ]
+      },
+      {
+        text: "反馈",
+        items: [
+          { text: "Message 消息提示", link: "components/message" },
+        ]
       }
     ],
 

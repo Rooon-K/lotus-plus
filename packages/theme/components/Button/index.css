@@ -196,7 +196,7 @@
   &.button-text {
     @each $val in success, warning, danger {
       &.button-$(val) {
-        --lotus-button-text-color: var(--$(val));
+        --lotus-button-text-color: var(--$(val)-color);
         --lotus-button-bg-color: var(--$(val)-light-color);
         --lotus-button-border-color: var(--$(val)-light-color);
         --lotus-button-outline-color: var(--$(val)-light-color);

@@ -6,7 +6,8 @@ import {
   LRow,
   LLink,
   LCollapse,
-  LCollapseItem
+  LCollapseItem,
+  LMessage
 } from "@lotus-plus/components";
 import type { Plugin } from "vue";
 
@@ -18,5 +19,6 @@ export default [
   LRow,
   LLink,
   LCollapse,
-  LCollapseItem
+  LCollapseItem,
+  LMessage
 ] as Plugin[];
