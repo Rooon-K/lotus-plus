@@ -1,0 +1,75 @@
+.lotus-message {
+  --lotus-message-bg-color: var(--bg-header-color);
+  --lotus-message-border-color: var(--border-color);
+  --lotus-message-padding: 15px 19px;
+  --lotus-message-close-size: 16px;
+  --lotus-message-icon-color: var(--primary-color);
+  --lotus-message-hover-icon-color: var(--primary-color);
+  --lotus-message-icon-size: 16px;
+  --lotus-message-icon-margin: 8px;
+  --lotus-message-text-color: var(--text-color-1);
+  --info-color: var(--normal-color);
+  --info-light-color: var(--normal-light-color);
+  --error-color: var(--danger-color);
+  --error-light-color: var(--danger-light-color);
+}
+
+.lotus-message {
+  width: fit-content;
+  max-width: calc(100% - 32px);
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border-width: var(--lotus-border-1);
+  border-style: var(--lotus-border-solid);
+  border-color: var(--lotus-message-border-color);
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: var(--lotus-message-bg-color);
+  padding: var(--lotus-message-padding);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  transition: top var(--lotus-transition-duration), opacity var(--lotus-transition-duration),
+    transform var(--lotus-transition-duration);
+  .lotus-message__icon {
+    color: var(--lotus-message-icon-color);
+    font-size: var(--lotus-message-icon-size);
+    margin-right: var(--lotus-message-icon-margin);
+    width: var(--lotus-message-icon-size);
+  }
+  .lotus-message__content {
+    color: var(--lotus-message-text-color);
+    overflow: break-word;
+    font-size: var(--lotus-font-size-default);
+  }
+  &.lotus-message-closable .lotus-message__content {
+    padding-right: 10px;
+  }
+  .lotus-message__close {
+    display: flex;
+    align-items: center;
+  }
+  .lotus-message__close .lotus-icon {
+    cursor: pointer;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+@each $val in info, success, warning, error {
+  .lotus-message--$(val) {
+    --lotus-message-icon-color: var(--$(val)-color);
+    .lotus-message__close {
+      --lotus-icon-color: var(--$(val)-color);
+    }
+  }
+}
+
+.lotus-message.fade-up-enter-from,
+.lotus-message.fade-up-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -100%);
+}
