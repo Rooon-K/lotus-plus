@@ -52,7 +52,7 @@ demo-preview=../demo/message/Update.vue
 
 ## 调用方式
 
-Lotus Plus 为 `app.config.globalProperties` 添加了全局方法 `$message` , 可以通过 `this.$message` 调用。同时也提供了 `this.$message.info` 、`this.$message.success` 、`this.$message.warning` 、`this.$message.error` 、`this.$message.loading` 等方法。
+Lotus Plus 为 `app.config.globalProperties` 添加了全局方法 `$message` , 可以通过 `$message` 调用。同时也提供了 `$message.info` 、`$message.success` 、`$message.warning` 、`$message.error` 、`$message.loading` 等方法。
 
 ::: preview
 demo-preview=../demo/message/Call.vue

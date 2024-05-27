@@ -11,7 +11,7 @@ const open2 = () => {
   <div>
     <l-button @click="open1">插件式调用</l-button>
     <l-button @click="open2">函数式调用</l-button>
-    <l-button @click="() => this.$message.success('Congrats, this is a success message.')"
+    <l-button @click="() => $message.success('Congrats, this is a success message.')"
       >全局方法调用</l-button
     >
   </div>
