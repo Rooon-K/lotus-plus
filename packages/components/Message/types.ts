@@ -9,16 +9,6 @@ export const messageTypes = [
 ] as const;
 export type MessageType = (typeof messageTypes)[number];
 
-export type MessagePosition =
-  | "top"
-  | "bottom"
-  | "right"
-  | "left"
-  | "top-right"
-  | "top-left"
-  | "bottom-right"
-  | "bottom-left";
-
 export interface MessageConfig {
   id: string;
   message?: string | VNode | (() => VNode);
@@ -26,7 +16,6 @@ export interface MessageConfig {
   icon?: string | Component;
   duration?: number;
   showClose?: boolean;
-  position?: MessagePosition;
   transitionName?: string;
   zIndex: number;
   offset?: number;
