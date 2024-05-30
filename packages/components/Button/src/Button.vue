@@ -2,7 +2,7 @@
 import { computed, inject, ref } from "vue";
 import { throttle } from "lodash-es";
 import type { ButtonProps, ButtonEmits } from "./types";
-import { LIcon } from "../Icon";
+import { LIcon } from "../../Icon";
 import { BUTTON_GROUP_CTX_KEY } from "./constance";
 
 defineOptions({
@@ -87,3 +87,7 @@ defineExpose({
     <slot></slot>
   </component>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

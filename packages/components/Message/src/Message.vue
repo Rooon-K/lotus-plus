@@ -2,10 +2,10 @@
 import { computed, onMounted, ref, watch } from "vue";
 import type { MessageConfig } from "./types";
 import { delay } from "lodash-es";
-import { LIcon } from "../Icon";
+import { LIcon } from "../../Icon";
 import { typeIconMap } from "@lotus-plus/utils";
 import { getLastBottomOffset } from "./methods";
-import { useEventListener } from "../../hooks";
+import { useEventListener } from "@lotus-plus/hooks";
 import { RenderVnode } from "@lotus-plus/utils";
 
 defineOptions({
@@ -116,3 +116,7 @@ defineExpose({
     </div>
   </transition>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

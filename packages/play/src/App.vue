@@ -1,19 +1,25 @@
+<script setup lang="ts">
+import { LMessage, LButton } from "lotus-plus";
+import "lotus-plus/dist/theme/Button.css"
+import "lotus-plus/dist/theme/Message.css"
+const open = () => {
+  LMessage({
+    id: "loading",
+    message: "Loading...",
+    type: "loading"
+  });
+  setTimeout(() => {
+    LMessage({
+      id: "loading",
+      message: "loaded",
+      type: "success"
+    });
+  }, 2000);
+};
+</script>
+
 <template>
   <div>
-    <p>
-      <l-link href="http://www.baidu.com">Link</l-link>
-      <l-link href="http://www.baidu.com" disabled>Link</l-link>
-    </p>
-    <p>
-      <l-link href="" status="success">aaa</l-link>
-      <l-link href="" status="warning">aaa</l-link>
-      <l-link href="" status="danger" disabled>aaa</l-link>
-    </p>
-    <p>
-      <l-link href="" loading>aaa</l-link>
-    </p>
-    <p>
-      <l-link href="" icon="edit">aaa</l-link>
-    </p>
+    <l-button @click="open">Loading</l-button>
   </div>
 </template>

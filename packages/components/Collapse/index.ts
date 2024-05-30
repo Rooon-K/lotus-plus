@@ -1,8 +1,8 @@
-import Collapse from "./Collapse.vue";
-import CollapseItem from "./CollapseItem.vue";
+import Collapse from "./src/Collapse.vue";
+import CollapseItem from "./src/CollapseItem.vue";
 import { withInstall } from "@lotus-plus/utils";
 
 export const LCollapse = withInstall(Collapse);
 export const LCollapseItem = withInstall(CollapseItem);
 
-export * from "./types";
+export * from "./src/types";

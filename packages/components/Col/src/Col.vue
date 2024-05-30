@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, inject, type CSSProperties } from "vue";
 import type { ColProps } from "./types";
-import { rowContextKey } from "../Row/constance";
+import { rowContextKey } from "../../Row/src/constance";
 defineOptions({
   name: "LCol"
 });
@@ -21,14 +21,14 @@ const colCls = computed(() => {
     [`lotus-col-pull-${props.pull}`]: props.pull
   };
 });
-const { gutter } = inject(rowContextKey, { gutter: computed(() => 0) })
+const { gutter } = inject(rowContextKey, { gutter: computed(() => 0) });
 const style = computed(() => {
-  const styles: CSSProperties = {}
+  const styles: CSSProperties = {};
   if (gutter.value) {
-    styles.paddingLeft = styles.paddingRight = `${gutter.value / 2}px`
+    styles.paddingLeft = styles.paddingRight = `${gutter.value / 2}px`;
   }
-  return styles
-})
+  return styles;
+});
 </script>
 
 <template>
@@ -36,3 +36,7 @@ const style = computed(() => {
     <slot></slot>
   </component>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

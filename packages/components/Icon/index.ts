@@ -1,6 +1,6 @@
-import Icon from "./Icon.vue";
+import Icon from "./src/Icon.vue";
 import { withInstall } from "@lotus-plus/utils";
 
 export const LIcon = withInstall(Icon);
 
-export * from "./types";
+export * from "./src/types";

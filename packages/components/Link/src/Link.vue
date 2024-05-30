@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { LinkEmits, LinkProps } from "./types";
-import { LIcon } from "../Icon";
+import { LIcon } from "../../Icon";
 import { computed } from "vue";
 
 defineOptions({
@@ -43,13 +43,7 @@ const iconStyle = computed(() => ({
   >
     <template v-if="loading">
       <slot name="loading">
-        <l-icon
-          class="loading-icon"
-          icon="spinner"
-          :style="iconStyle"
-          size="1x"
-          spin
-        />
+        <l-icon class="loading-icon" icon="spinner" :style="iconStyle" size="1x" spin />
       </slot>
     </template>
     <l-icon v-if="icon && !loading" size="1x" :icon="icon" :style="iconStyle" />
@@ -58,3 +52,7 @@ const iconStyle = computed(() => ({
     </span>
   </a>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

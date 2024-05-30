@@ -1,6 +1,6 @@
-import Col from "./Col.vue";
+import Col from "./src/Col.vue";
 import { withInstall } from "@lotus-plus/utils";
 
 export const LCol = withInstall(Col);
 
-export * from "./types";
+export * from "./src/types";

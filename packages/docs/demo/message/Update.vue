@@ -1,13 +1,23 @@
 <script lang="ts" setup>
-import { LMessage } from "lotus-plus"
+import { LMessage } from "lotus-plus";
 
-let index = 0;
 const open = () => {
-  LMessage({ id: "aaa", message: `Message ${++index}` });
+  LMessage({
+    id: "loading",
+    message: "Loading...",
+    type: "loading"
+  });
+  setTimeout(() => {
+    LMessage({
+      id: "loading",
+      message: "loaded",
+      type: "success"
+    });
+  }, 2000);
 };
 </script>
 <template>
   <div>
-    <l-button @click="open">Show message</l-button>
+    <l-button @click="open">Open Message</l-button>
   </div>
 </template>

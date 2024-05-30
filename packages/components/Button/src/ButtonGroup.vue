@@ -24,3 +24,7 @@ provide(
     <slot></slot>
   </div>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import lotusPlus from "../../core/index";
+// import lotusPlus from "lotus-plus";
+import "lotus-plus/dist/theme/index.css";
 
-createApp(App).use(lotusPlus).mount("#app");
+createApp(App).mount("#app");

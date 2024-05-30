@@ -1,8 +1,8 @@
 import { describe, it, expect, vi } from "vitest";
 import { mount } from "@vue/test-utils";
-import Link from "./Link.vue";
-import type { LinkStatus } from "./types";
-import Icon from "../Icon/Icon.vue";
+import Link from "../src/Link.vue";
+import type { LinkStatus } from "../src/types";
+import Icon from "../../Icon/src/Icon.vue";
 
 describe("Link Component", () => {
   it("should render correctly with default slot", () => {

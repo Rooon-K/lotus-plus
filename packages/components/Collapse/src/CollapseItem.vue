@@ -2,7 +2,7 @@
 import { computed, inject } from "vue";
 import type { CollapseItemProps } from "./types";
 import { COLLAPSE_CTX_KEY } from "./constance";
-import { LIcon } from "../Icon";
+import { LIcon } from "../../Icon";
 import transitionEvents from "./transitionEvents.ts";
 
 defineOptions({
@@ -41,3 +41,7 @@ const handleClick = () => {
     </transition>
   </div>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>
