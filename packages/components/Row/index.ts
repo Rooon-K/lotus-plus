@@ -1,6 +1,6 @@
-import Row from "./Row.vue";
+import Row from "./src/Row.vue";
 import { withInstall } from "@lotus-plus/utils";
 
 export const LRow = withInstall(Row);
 
-export * from "./types";
+export * from "./src/types";

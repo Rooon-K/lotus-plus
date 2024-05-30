@@ -1,6 +1,6 @@
-import message from "./methods";
+import message from "./src/methods";
 import { withInstallFunction } from "@lotus-plus/utils";
 
 export const LMessage = withInstallFunction(message, "$message");
 
-export * from "./types";
+export * from "./src/types";

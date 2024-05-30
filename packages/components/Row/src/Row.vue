@@ -40,3 +40,7 @@ const style = computed(() => {
     <slot></slot>
   </component>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

@@ -24,3 +24,7 @@ const customStyles = computed(() => ({ color: props.color ?? void 0 }));
     <font-awesome-icon v-bind="filterProps"></font-awesome-icon>
   </i>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>

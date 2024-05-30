@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import type { CollapseEmits, CollapseItemName, CollapseProps } from "./types";
 import { COLLAPSE_CTX_KEY } from "./constance";
-import { provide, ref, watch } from "vue";
+import { provide, ref, watch, watchEffect } from "vue";
+import { debugWarn } from "@lotus-plus/utils";
+
+const COMP_NAME = "LCollapse" as const;
 
 defineOptions({
   name: "LCollapse"
@@ -37,6 +40,11 @@ const updateActiveNames = (newNames: CollapseItemName[]) => {
   emits("change", newNames);
 };
 
+watchEffect(() => {
+  if (props.accordion && activeNames.value.length > 1)
+    debugWarn(COMP_NAME, "accordion mode should only have one active item");
+});
+
 watch(
   () => props.modelValue,
   (newNames) => updateActiveNames(newNames)
@@ -53,3 +61,7 @@ provide(COLLAPSE_CTX_KEY, {
     <slot></slot>
   </div>
 </template>
+
+<style scoped>
+@import "../style/index.css";
+</style>
