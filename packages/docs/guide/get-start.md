@@ -45,7 +45,6 @@ createApp(App).use(LotusPlus).mount("#app");
 import "lotus-plus/dist/index.css";
 
 import App from "./App.vue";
-// 全局使用
 createApp(App).mount("#app");
 ```
 
@@ -67,7 +66,7 @@ import LotusPlus from "lotus-plus";
 import "lotus-plus/dist/theme/index.css";
 
 import App from "./App.vue";
-// 全局使用
+// 全局使用组件
 createApp(App).use(LotusPlus).mount("#app");
 ```
 
@@ -76,7 +75,6 @@ createApp(App).use(LotusPlus).mount("#app");
   <l-button>我是 Button</l-button>
 </template>
 <script>
-import { LButton } from "lotus-plus";
 import "lotus-plus/dist/theme/Button.css";
 </script>
 ```

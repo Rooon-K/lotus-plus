@@ -84,6 +84,9 @@ importers:
       release-it:
         specifier: ^17.2.1
         version: 17.2.1(typescript@5.4.5)
+      rimraf:
+        specifier: ^5.0.7
+        version: 5.0.7
       shelljs:
         specifier: ^0.8.5
         version: 0.8.5
@@ -2872,6 +2875,11 @@ packages:
 
   rfdc@1.3.1:
     resolution: {integrity: sha512-r5a3l5HzYlIC68TpmYKlxWjmOP6wiPJ1vWv2HeLhNsRZMrCkxeqxiHlQ21oXmQ4F3SiryXBHhAD7JZqvOJjFmg==}
+
+  rimraf@5.0.7:
+    resolution: {integrity: sha512-nV6YcJo5wbLW77m+8KjH8aB/7/rxQy9SZ0HY5shnwULfS+9nmTtVXAJET5NdZmCzA4fPI/Hm1wo/Po/4mopOdg==}
+    engines: {node: '>=14.18'}
+    hasBin: true
 
   rollup@4.17.2:
     resolution: {integrity: sha512-/9ClTJPByC0U4zNLowV1tMBe8yMEAxewtR3cUNX5BoEpGH3dQEWpJLr6CLp0fPdYRF/fzVOgvDb1zXuakwF5kQ==}
@@ -6547,6 +6555,10 @@ snapshots:
   reusify@1.0.4: {}
 
   rfdc@1.3.1: {}
+
+  rimraf@5.0.7:
+    dependencies:
+      glob: 10.3.12
 
   rollup@4.17.2:
     dependencies:

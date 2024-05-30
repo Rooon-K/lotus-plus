@@ -66,7 +66,7 @@ export default defineConfig({
       },
     }),
     hooks({
-      rmFiles: ["./dist/es", "./dist/theme", "./dist/types"],
+      // rmFiles: ["./dist/es", "./dist/theme", "./dist/types"],
       afterBuild: moveStyles
     })
   ],
