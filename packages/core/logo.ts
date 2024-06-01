@@ -12,7 +12,7 @@ _________________________________________________________
                author: Rooon-K
 `;
     const rainbowGradient = `
-     background: linear-gradient(135deg, orange 60%, cyan);
+     background: linear-gradient(135deg, #29f39b, #01a1fa);
      background-clip: text;
      color: transparent;
      font-size: 16px;
