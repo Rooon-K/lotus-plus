@@ -47,6 +47,7 @@ export default defineConfig({
         text: "反馈",
         items: [
           { text: "Message 消息提示", link: "components/message" },
+          { text: "Notification 通知", link: "components/notification" },
         ]
       }
     ],
