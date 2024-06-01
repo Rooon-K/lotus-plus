@@ -48,6 +48,7 @@
     padding-right: 10px;
   }
   .lotus-message__close {
+    color: var(--normal-color);
     display: flex;
     align-items: center;
   }
@@ -62,9 +63,6 @@
 @each $val in info, success, warning, error {
   .lotus-message--$(val) {
     --lotus-message-icon-color: var(--$(val)-color);
-    .lotus-message__close {
-      --lotus-icon-color: var(--$(val)-color);
-    }
   }
 }
 

@@ -1,3 +1,9 @@
+---
+search: false
+next:
+  link: /components/notification
+  text: Notification 通知
+---
 # Message 全局提示
 
 ## 基本用法

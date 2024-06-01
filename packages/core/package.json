@@ -1,6 +1,6 @@
 {
   "name": "lotus-plus",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Components library by Vue3 + TS",
   "type": "module",
   "files": [
@@ -26,7 +26,8 @@
   "scripts": {
     "build": "run-s clean build-only",
     "build-only": "run-p build-es build-umd",
-    "build:watch": "run-p build-es:watch build-umd:watch",
+    "build:watch": "run-s clean build-only:watch",
+    "build-only:watch": "run-p build-es:watch build-umd:watch",
     "build-es": "vite build --config vite.es.config.ts",
     "build-umd": "vite build --config vite.umd.config.ts",
     "build-es:watch": "vite build --watch --config vite.es.config.ts",

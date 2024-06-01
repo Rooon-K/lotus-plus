@@ -10,7 +10,7 @@ import {
   type MessageParams,
   type MessageType
 } from "./types";
-import { useZIndex } from "@lotus-plus/hooks"
+import { useZIndex } from "@lotus-plus/hooks";
 import { each, findIndex, get, isFunction, isString, set } from "lodash-es";
 
 let seed = 0;
@@ -103,7 +103,8 @@ export const message: MessageFn & Partial<Message> = (options = {}) => {
   } else {
     instance = createMessage(normalized);
   }
-
+  
+  instance!.vm.exposed!.startTimer();
   return instance!.handler;
 };
 

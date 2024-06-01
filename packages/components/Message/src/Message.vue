@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from "vue";
 import type { MessageConfig } from "./types";
-import { delay } from "lodash-es";
+import { delay, isString } from "lodash-es";
 import { LIcon } from "../../Icon";
-import { typeIconMap } from "@lotus-plus/utils";
+import { typeIconMap, RenderVnode } from "@lotus-plus/utils";
 import { getLastBottomOffset } from "./methods";
 import { useEventListener } from "@lotus-plus/hooks";
-import { RenderVnode } from "@lotus-plus/utils";
 
 defineOptions({
   name: "LMessage"
@@ -39,7 +38,7 @@ const clearTimer = () => {
 };
 
 const iconName = computed(() =>
-  props.icon ? props.icon : typeIconMap.get(props.type) ?? "info-circle"
+  isString(props.icon) ? props.icon : typeIconMap.get(props.type) ?? "info-circle"
 );
 
 const boxHeight = ref(0);
@@ -72,6 +71,7 @@ onMounted(() => {
 
 defineExpose({
   bottomOffset,
+  startTimer,
   close
 });
 </script>
