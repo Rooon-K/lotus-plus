@@ -1,12 +1,6 @@
 import type { Component, ComponentInternalInstance, VNode } from "vue";
 
-export const messageTypes = [
-  "info",
-  "success",
-  "warning",
-  "error",
-  "loading",
-] as const;
+export const messageTypes = ["info", "success", "warning", "error", "loading"] as const;
 export type MessageType = (typeof messageTypes)[number];
 
 export interface MessageConfig {
@@ -51,10 +45,6 @@ export interface MessageInstance {
   props: MessageConfig;
   vm: ComponentInternalInstance;
   handler: MessageHandler;
-}
-
-export interface MessageEmits {
-  close: () => void;
 }
 
 export type CreateMessageConfig = Omit<MessageConfig, "onDestroy" | "zIndex">;
