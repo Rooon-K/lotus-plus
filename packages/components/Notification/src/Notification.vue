@@ -16,7 +16,6 @@ let props = withDefaults(defineProps<NotificationConfig>(), {
   type: "info",
   duration: 3000,
   transitionName: "fade",
-  offset: 10,
   position: "top-right"
 });
 
@@ -66,6 +65,7 @@ onMounted(() => {
 
 defineExpose({
   visible,
+  startTimer,
   close
 });
 </script>
@@ -94,7 +94,7 @@ defineExpose({
         </div>
         <div class="lotus-notification__content">
           <slot>
-            <render-vnode v-if="message" :vNode="message"></render-vnode>
+            <render-vnode v-if="content" :vNode="content"></render-vnode>
           </slot>
         </div>
       </div>

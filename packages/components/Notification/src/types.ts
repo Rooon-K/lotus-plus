@@ -15,7 +15,7 @@ export type NotificationPosition = (typeof NotificationPositions)[number];
 export interface NotificationConfig {
   id: string;
   title?: string | VNode | (() => VNode);
-  message?: string | VNode | (() => VNode);
+  content?: string | VNode | (() => VNode);
   type?: NotificationType;
   duration?: number;
   position: NotificationPosition;

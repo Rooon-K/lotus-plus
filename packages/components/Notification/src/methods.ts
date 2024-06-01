@@ -36,7 +36,7 @@ const notificationDefault = {
 const normalizeOptions = (options: NotificationParams): CreateNotificationConfig => {
   const result =
     !options || isVNode(options) || isString(options) || isFunction(options)
-      ? { message: options }
+      ? { content: options }
       : options;
   return {
     ...notificationDefault,
@@ -96,10 +96,15 @@ export const updateNotification = (id: string, options: Partial<NotificationConf
     return createNotify(options as CreateNotificationConfig);
   } else {
     const instance = notifications[position][idx];
-    instance.props = {
+
+    options.offset = instance.props.offset;
+
+    const props = {
       ...instance.props,
       ...options
     };
+
+    Object.assign(instance.vm.props, props);
     return instance;
   }
 };
@@ -107,12 +112,15 @@ export const updateNotification = (id: string, options: Partial<NotificationConf
 export const notify: NotifyFn & Partial<Notify> = (options = {}) => {
   const normalized = normalizeOptions(options);
   let instance;
+
   setTimeout(() => {
     if (normalized.id) {
       instance = updateNotification(normalized.id, normalized);
     } else {
       instance = createNotify(normalized);
     }
+
+    instance!.vm.exposed!.startTimer();
     return instance!.handler;
   });
 };

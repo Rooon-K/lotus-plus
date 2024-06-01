@@ -71,6 +71,7 @@ onMounted(() => {
 
 defineExpose({
   bottomOffset,
+  startTimer,
   close
 });
 </script>

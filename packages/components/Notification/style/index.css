@@ -35,6 +35,7 @@
   overflow: hidden;
   z-index: 9999;
   overflow-wrap: anywhere;
+  hyphens: auto;
   transition: opacity var(--lotus-transition-duration), transform var(--lotus-transition-duration),
     left var(--lotus-transition-duration), right var(--lotus-transition-duration),
     top var(--lotus-transition-duration), bottom var(--lotus-transition-duration);
