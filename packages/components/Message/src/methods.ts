@@ -103,8 +103,11 @@ export const message: MessageFn & Partial<Message> = (options = {}) => {
   } else {
     instance = createMessage(normalized);
   }
+
+  const el = instance!.vnode.el!;
+  el.addEventListener("onmouseenter", instance!.vm.exposed!.startTimer);
+  el.addEventListener("onmouseleave", instance!.vm.exposed!.clearTimer);
   
-  instance!.vm.exposed!.startTimer();
   return instance!.handler;
 };
 
