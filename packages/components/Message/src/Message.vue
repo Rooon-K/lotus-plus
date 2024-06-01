@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from "vue";
+import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import type { MessageConfig } from "./types";
 import { delay, isString } from "lodash-es";
 import { LIcon } from "../../Icon";
@@ -69,9 +69,16 @@ onMounted(() => {
   startTimer();
 });
 
+onUnmounted(() => {
+  messageRef.value?.removeEventListener("mouseenter", startTimer);
+  messageRef.value?.removeEventListener("mouseleave", clearTimer);
+});
+
 defineExpose({
   bottomOffset,
   startTimer,
+  clearTimer,
+  messageRef,
   close
 });
 </script>
