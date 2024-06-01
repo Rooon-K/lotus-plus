@@ -120,7 +120,10 @@ export const notify: NotifyFn & Partial<Notify> = (options = {}) => {
       instance = createNotify(normalized);
     }
 
-    instance!.vm.exposed!.startTimer();
+    const el = instance!.vnode.el!;
+    el.addEventListener("onmouseenter", instance!.vm.exposed!.startTimer);
+    el.addEventListener("onmouseleave", instance!.vm.exposed!.clearTimer);
+    
     return instance!.handler;
   });
 };

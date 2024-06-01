@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, type CSSProperties } from "vue";
+import { computed, onMounted, onUnmounted, ref, type CSSProperties } from "vue";
 import type { NotificationConfig } from "./types";
 import { delay, isString } from "lodash-es";
 import { typeIconMap, RenderVnode } from "@lotus-plus/utils";
@@ -63,10 +63,17 @@ onMounted(() => {
   startTimer();
 });
 
+onUnmounted(() => {
+  notificationRef.value?.removeEventListener("mouseenter", startTimer);
+  notificationRef.value?.removeEventListener("mouseleave", clearTimer);
+});
+
 defineExpose({
   visible,
   startTimer,
-  close
+  clearTimer,
+  close,
+  notificationRef
 });
 </script>
 
