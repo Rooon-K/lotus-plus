@@ -11,6 +11,16 @@ import ColorsWatches from '../.vitepress/components/ColorsWatches.vue'
 
 # 浅色模式
 
+## useTextColorBasedOnBgColor
+
+通过预设的 `useTextColorBasedOnBgColor()` 钩子函数, 可以实现文字颜色根据背景颜色自动调整。
+
+```ts
+import { useTextColorBasedOnBgColor } from "lotus-plus";
+
+useTextColorBasedOnBgColor(el); // el 为元素选择器或元素对象, 请获取后传入
+```
+
 ## Primary
 
 常规、悬浮(hover)、点击(click)、特殊场景、激活(active)/浅色禁用、禁用(disabled)/浅色悬浮、浅色。

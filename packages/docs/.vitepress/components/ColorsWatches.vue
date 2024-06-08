@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import { LMessage } from "lotus-plus";
-import { ref } from "vue";
+import { LMessage, useTextColorBasedOnBgColor } from "lotus-plus";
+import { onMounted, ref } from "vue";
 
 interface Props {
   colors: string[];
-  fontColor?: string;
 }
-const props = withDefaults(defineProps<Props>(), {
-  fontColor: "#fff"
-});
-const { colors, fontColor } = props;
+const props = defineProps<Props>();
+const { colors } = props;
 
 const containerRef = ref<HTMLDivElement | HTMLDivElement[] | null>();
 const copyColor = async (color: string) => {
@@ -35,28 +32,10 @@ const copyColor = async (color: string) => {
     return false;
   }
 };
-function setTextColorBasedOnBackground(element) {
-  const backgroundColor = window.getComputedStyle(element).backgroundColor;
-  const regex = /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/;
-  const matches = backgroundColor.match(regex);
 
-  if (!matches) {
-    throw new Error("无效的颜色格式");
-  }
-
-  const r = parseInt(matches[1]);
-  const g = parseInt(matches[2]);
-  const b = parseInt(matches[3]);
-  const a = matches[4] ? parseFloat(matches[4]) : 1;
-
-  const brightness = Math.round((0.299 * r + 0.587 * g + 0.114 * b) / a);
-
-  element.style.setProperty("color", brightness > 128 ? "black" : "white");
-}
-
-setTimeout(() => {
+onMounted(() => {
   (containerRef.value as unknown as HTMLDivElement[]).forEach((el) => {
-    setTextColorBasedOnBackground(el);
+    useTextColorBasedOnBgColor(el);
   });
 });
 </script>
