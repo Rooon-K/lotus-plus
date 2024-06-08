@@ -15,20 +15,9 @@ import ColorsWatches from '../.vitepress/components/ColorsWatches.vue'
 
 通过预设的 `useDarkMode()` 钩子函数, 可以实现暗黑模式切换。
 
-```ts
-<script setup lang="ts">
-import { useDarkMode } from "lotus-plus";
-const changeTheme = () => {
-  useDarkMode();
-};
-</script>
-
-<template>
-  <div>
-    <l-button @click="changeTheme">light/dark mode</l-button>
-  </div>
-</template>
-```
+::: preview
+demo-preview=../demo/useDarkMode.vue
+:::
 
 ## Primary
 
@@ -76,4 +65,4 @@ const changeTheme = () => {
 
 强调/正文标题、次强调/正文标题、次要信息、置灰信息。
 
-<ColorsWatches :colors="['#F6F6F6', '#C5C5C5', '#929293', '#5F5F60']" font-color="#333" />
+<ColorsWatches :colors="['#F6F6F6', '#C5C5C5', '#929293', '#5F5F60']" />

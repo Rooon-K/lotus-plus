@@ -39,15 +39,13 @@ export default defineConfig({
       },
       {
         text: "数据展示",
-        items: [
-          { text: "Collapse 折叠面板", link: "components/collapse" },
-        ]
+        items: [{ text: "Collapse 折叠面板", link: "components/collapse" }]
       },
       {
         text: "反馈",
         items: [
           { text: "Message 消息提示", link: "components/message" },
-          { text: "Notification 通知", link: "components/notification" },
+          { text: "Notification 通知", link: "components/notification" }
         ]
       }
     ],
@@ -59,5 +57,8 @@ export default defineConfig({
       md.use(containerPreview);
       md.use(componentPreview);
     }
+  },
+  transformHead(context) {
+    context.head.push(["meta", { name: "baidu-site-verification", content: "codeva-XusLDvHa0l" }]);
   }
 });

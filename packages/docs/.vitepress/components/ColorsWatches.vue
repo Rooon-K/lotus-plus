@@ -1,21 +1,20 @@
 <script setup lang="ts">
+import { useTextColorBasedOnBgColor, useTextCopy } from "lotus-plus";
+import { onMounted, ref } from "vue";
+
 interface Props {
   colors: string[];
-  fontColor?: string;
 }
-const props = withDefaults(defineProps<Props>(), {
-  fontColor: "#fff"
-});
-const { colors, fontColor } = props;
+const props = defineProps<Props>();
+const { colors } = props;
 
-const copyColor = async (color: string) => {
-  try {
-    await navigator.clipboard.writeText(color);
-    // TODO: show success message
-  } catch (error) {
-    console.error(error);
-  }
-};
+const containerRef = ref<HTMLDivElement | HTMLDivElement[] | null>();
+
+onMounted(() => {
+  (containerRef.value as unknown as HTMLDivElement[]).forEach((el) => {
+    useTextColorBasedOnBgColor(el);
+  });
+});
 </script>
 
 <template>
@@ -24,8 +23,9 @@ const copyColor = async (color: string) => {
       v-for="color in colors"
       :key="color"
       class="color-swatch"
-      :style="{ backgroundColor: color, color: fontColor }"
-      @click="copyColor(color)"
+      :style="{ backgroundColor: color }"
+      @click="useTextCopy(color)"
+      ref="containerRef"
     >
       <span class="color-name">{{ color }}</span>
     </div>
