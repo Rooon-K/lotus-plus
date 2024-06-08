@@ -18,7 +18,7 @@ import ColorsWatches from '../.vitepress/components/ColorsWatches.vue'
 ```ts
 import { useTextColorBasedOnBgColor } from "lotus-plus";
 
-useTextColorBasedOnBgColor(el); // el 为元素选择器或元素对象, 请获取后传入
+useTextColorBasedOnBgColor(el); // 接收两个参数, el 为需要调整的元素, threshold 为亮度阈值, 默认为 128。
 ```
 
 ## Primary
