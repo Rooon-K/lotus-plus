@@ -1,4 +1,4 @@
-export default function useTextColorBasedOnBgColor(el: HTMLElement) {
+export default function useTextColorBasedOnBgColor(el: HTMLElement, threshold = 128) {
   const backgroundColor = window.getComputedStyle(el).backgroundColor;
   const regex = /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/;
   const matches = backgroundColor.match(regex);
@@ -14,5 +14,5 @@ export default function useTextColorBasedOnBgColor(el: HTMLElement) {
 
   const brightness = Math.round((0.299 * r + 0.587 * g + 0.114 * b) / a);
 
-  el.style.setProperty("color", brightness > 128 ? "black" : "white");
+  el.style.setProperty("color", brightness > threshold ? "black" : "white");
 }
