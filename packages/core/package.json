@@ -1,6 +1,6 @@
 {
   "name": "lotus-plus",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Components library by Vue3 + TS",
   "type": "module",
   "files": [
