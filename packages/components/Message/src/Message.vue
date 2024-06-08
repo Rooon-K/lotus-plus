@@ -66,12 +66,11 @@ useEventListener(document, "keydown", (e: Event) => {
 
 onMounted(() => {
   visible.value = true;
-  startTimer();
 });
 
 onUnmounted(() => {
-  messageRef.value?.removeEventListener("mouseenter", startTimer);
-  messageRef.value?.removeEventListener("mouseleave", clearTimer);
+  messageRef.value?.removeEventListener("mouseenter", clearTimer);
+  messageRef.value?.removeEventListener("mouseleave", startTimer);
 });
 
 defineExpose({
