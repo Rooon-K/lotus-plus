@@ -65,4 +65,4 @@ demo-preview=../demo/useDarkMode.vue
 
 强调/正文标题、次强调/正文标题、次要信息、置灰信息。
 
-<ColorsWatches :colors="['#F6F6F6', '#C5C5C5', '#929293', '#5F5F60']" font-color="#333" />
+<ColorsWatches :colors="['#F6F6F6', '#C5C5C5', '#929293', '#5F5F60']" />

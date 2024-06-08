@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { LMessage } from "lotus-plus";
+import { ref } from "vue";
 
 interface Props {
   colors: string[];
@@ -10,6 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 const { colors, fontColor } = props;
 
+const containerRef = ref<HTMLDivElement | HTMLDivElement[] | null>();
 const copyColor = async (color: string) => {
   if (navigator.clipboard && navigator.clipboard.writeText) {
     return navigator.clipboard.writeText(color);
@@ -33,6 +35,30 @@ const copyColor = async (color: string) => {
     return false;
   }
 };
+function setTextColorBasedOnBackground(element) {
+  const backgroundColor = window.getComputedStyle(element).backgroundColor;
+  const regex = /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/;
+  const matches = backgroundColor.match(regex);
+
+  if (!matches) {
+    throw new Error("无效的颜色格式");
+  }
+
+  const r = parseInt(matches[1]);
+  const g = parseInt(matches[2]);
+  const b = parseInt(matches[3]);
+  const a = matches[4] ? parseFloat(matches[4]) : 1;
+
+  const brightness = Math.round((0.299 * r + 0.587 * g + 0.114 * b) / a);
+
+  element.style.setProperty("color", brightness > 128 ? "black" : "white");
+}
+
+setTimeout(() => {
+  (containerRef.value as unknown as HTMLDivElement[]).forEach((el) => {
+    setTextColorBasedOnBackground(el);
+  });
+});
 </script>
 
 <template>
@@ -41,8 +67,9 @@ const copyColor = async (color: string) => {
       v-for="color in colors"
       :key="color"
       class="color-swatch"
-      :style="{ backgroundColor: color, color: fontColor }"
+      :style="{ backgroundColor: color, color: `hsl(0, 0%, 90%)` }"
       @click="copyColor(color)"
+      ref="containerRef"
     >
       <span class="color-name">{{ color }}</span>
     </div>
