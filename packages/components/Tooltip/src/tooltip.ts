@@ -125,7 +125,7 @@ export const vTooltip: Directive = {
     el.$_content = options.content || tooltipOptions.content;
     el.$_delay = options.delay || tooltipOptions.delay;
     el.$_disabled = options.disabled || tooltipOptions.disabled;
-    el.$_position = options.position || modifierPosition.toString() || tooltipOptions.position;
+    el.$_position = options.position || modifierPosition[0] || tooltipOptions.position;
     el.$_trigger = options.trigger || tooltipOptions.trigger;
   },
   mounted(el: ElType, binding) {
