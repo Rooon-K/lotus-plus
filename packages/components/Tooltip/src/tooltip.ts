@@ -119,11 +119,13 @@ export const vTooltip: Directive = {
   beforeMount(el: ElType, binding) {
     // 数据初始化
     const options = binding.value || {};
+    const positions = ["top", "bottom", "left", "right"];
+    const modifierPosition = Object.keys(binding.modifiers).filter((p) => positions.includes(p));
     el.$_tooltipId = uniComponentId("tooltip_id");
     el.$_content = options.content || tooltipOptions.content;
     el.$_delay = options.delay || tooltipOptions.delay;
     el.$_disabled = options.disabled || tooltipOptions.disabled;
-    el.$_position = options.position || tooltipOptions.position;
+    el.$_position = options.position || modifierPosition.toString() || tooltipOptions.position;
     el.$_trigger = options.trigger || tooltipOptions.trigger;
   },
   mounted(el: ElType, binding) {
