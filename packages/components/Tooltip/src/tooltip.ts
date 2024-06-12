@@ -122,7 +122,7 @@ export const vTooltip: Directive = {
     const positions = ["top", "bottom", "left", "right"];
     const modifierPosition = Object.keys(binding.modifiers).filter((p) => positions.includes(p));
     el.$_tooltipId = uniComponentId("tooltip_id");
-    el.$_content = options.content || tooltipOptions.content;
+    el.$_content = options.content || options || tooltipOptions.content;
     el.$_delay = options.delay || tooltipOptions.delay;
     el.$_disabled = options.disabled || tooltipOptions.disabled;
     el.$_position = options.position || modifierPosition[0] || tooltipOptions.position;
