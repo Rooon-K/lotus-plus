@@ -66,6 +66,7 @@ html.dark {
   --bg-disabled-color: #17171a;
   --bg-heavey-color: #5f5f60;
   --bg-header-color: #232324;
+  --bg-heaver-color: #2e2e30;
 
   /* TextColor */
   --text-color-1: #f6f6f6;
@@ -73,5 +74,5 @@ html.dark {
   --text-color-3: #929293;
   --text-color-4: #5f5f60;
   --text-color-5: #fff;
-  --text-disabled-color: hsla(0,0%,100%,.3);
+  --text-disabled-color: hsla(0, 0%, 100%, 0.3);
 }

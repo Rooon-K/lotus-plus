@@ -1,25 +1,19 @@
-<script setup lang="ts">
-import { LMessage, LButton } from "lotus-plus";
-import "lotus-plus/dist/theme/Button.css"
-import "lotus-plus/dist/theme/Message.css"
-const open = () => {
-  LMessage({
-    id: "loading",
-    message: "Loading...",
-    type: "loading"
-  });
-  setTimeout(() => {
-    LMessage({
-      id: "loading",
-      message: "loaded",
-      type: "success"
-    });
-  }, 2000);
-};
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    <l-button @click="open">Loading</l-button>
+  <div class="container">
+    <l-button status="primary" v-tooltip="{ content: 'This is a two-line tooltip content.This is a two-line tooltip content.', position: 'top' }">top</l-button>
+    <l-button status="primary" v-tooltip="{ content: 'This is a two-line tooltip content.This is a two-line tooltip content.', position: 'bottom' }">bottom</l-button>
+    <l-button status="primary" v-tooltip="{ content: 'This is a two-line tooltip content.This is a two-line tooltip content.', position: 'left' }">left</l-button>
+    <l-button status="primary" v-tooltip="{ content: 'This is a two-line tooltip content.This is a two-line tooltip content.', position: 'right' }">right</l-button>
   </div>
 </template>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+</style>
