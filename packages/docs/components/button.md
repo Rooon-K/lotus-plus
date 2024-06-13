@@ -1,5 +1,8 @@
 ---
 search: false
+prev:
+  link: /guide/dark-mode
+  text: 暗黑模式
 next:
   link: /components/icon
   text: Icon 图标

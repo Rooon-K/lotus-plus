@@ -1,5 +1,8 @@
 ---
 search: false
+prev:
+  link: /components/tooltip
+  text: Tooltip 文字提示
 next:
   link: /components/notification
   text: Notification 通知
