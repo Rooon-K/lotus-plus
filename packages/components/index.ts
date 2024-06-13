@@ -7,3 +7,4 @@ export * from "./Collapse";
 export * from "./Message";
 export * from "./Notification";
 export * from "./Tooltip";
+export * from "./Input";

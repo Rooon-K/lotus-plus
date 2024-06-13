@@ -1,0 +1,247 @@
+.lotus-input {
+  --lotus-input-text-color: var(--normal-color);
+  --lotus-input-text-color-disabled: var(--normal-disabed-color);
+  --lotus-input-border-color: var(--border-color);
+  --lotus-input-border-radius: var(--lotus-border-radius-default);
+  --lotus-input-border-hover: var(--border-hover-color);
+  --lotus-input-border-focus: var(--primary-color);
+  --lotus-input-border-disabled: var(--border-disabled-color);
+  --lotus-input-border-transparent: 0 0 0 1px transparent inset;
+  --lotus-input-bg-color: var(--bg-color);
+  --lotus-input-bg-color-hover: var(--bg-hover-color);
+  --lotus-input-bg-color-disabled: var(--bg-disabled-color);
+  --lotus-input-placeholder-color: var(--normal-special-color);
+  --lotus-input-line-height: 32px;
+}
+
+.lotus-input {
+  position: relative;
+  font-size: 16px;
+  display: inline-flex;
+  width: 100%;
+  line-height: var(--lotus-input-line-height);
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  &.is-disabled {
+    cursor: not-allowed;
+    .lotus-input__wrapper {
+      background-color: var(--lotus-input-bg-color-disabled);
+      border-color: var(--lotus-input-border-disabled);
+      box-shadow: 0 0 0 1px var(--lotus-input-border-disabled) inset;
+    }
+    .lotus-input__inner {
+      background-color: var(--lotus-input-bg-color-disabled);
+      -webkit-text-fill-color: var(--lotus-input-text-color-disabled);
+      cursor: not-allowed;
+    }
+    .lotus-textarea__inner {
+      background-color: var(--lotus-input-bg-color-disabled);
+      -webkit-text-fill-color: var(--lotus-input-text-color-disabled);
+      cursor: not-allowed;
+      color: var(--lotus-input-text-color-disabled);
+      box-shadow: 0 0 0 1px var(--lotus-input-border-disabled) inset;
+    }
+  }
+
+  &.is-prepend {
+    > .lotus-input__wrapper {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &.is-append {
+    > .lotus-input__wrapper {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &.is-focus .lotus-input__wrapper {
+    box-shadow: 0 0 0 1px var(--lotus-input-border-focus) inset !important;
+  }
+}
+
+.lotus-input--large {
+  --lotus-input-line-height: 40px;
+  font-size: 14px;
+  .lotus-input__wrapper {
+    padding: 1px 15px;
+    .lotus-input__inner {
+      --lotus-input-inner-height: calc(var(--lotus-input-height, 40px) - 2px);
+    }
+  }
+}
+
+.lotus-input--large {
+  --lotus-input-line-height: 24px;
+  font-size: 12px;
+  .lotus-input__wrapper {
+    padding: 1px 7px;
+    .lotus-input__inner {
+      --lotus-input-inner-height: calc(var(--lotus-input-height, 24px) - 2px);
+    }
+  }
+}
+
+.lotus-input__prefix,
+.lotus-input__suffix {
+  display: inline-flex;
+  white-space: nowrap;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: center;
+  color: var(--lotus-input-text-color);
+  transition: all avr(--lotus-transition-duration);
+}
+
+.lotus-input__prefix {
+  > :first-child {
+    margin-left: 0px !important;
+  }
+  > :last-child {
+    margin-right: 8px !important;
+  }
+}
+
+.lotus-input__suffix {
+  > :first-child {
+    margin-left: 8px !important;
+  }
+  > :last-child {
+    margin-right: 0px !important;
+  }
+}
+
+.lotus-input__prepend,
+.lotus-input__append {
+  background-color: var(--lotus-input-bg-color);
+  color: var(--lotus-input-text-color);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  border-radius: var(--lotus-input-border-radius);
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+.lotus-input__prepend {
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 1px 0 0 0 var(--lotus-input-border-color) inset,
+    0 1px 0 0 var(--lotus-input-border-color) inset,
+    0 -1px 0 0 var(--lotus-input-border-color) inset;
+}
+
+.lotus-input__append {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  box-shadow: 0 1px 0 0 var(--lotus-input-border-color) inset,
+    0 -1px 0 0 var(--lotus-input-border-color) inset,
+    -1px 0 0 0 var(--lotus-input-border-color) inset;
+  & > .lotus-input__wrapper {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.lotus-input--textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: 14px;
+}
+
+.lotus-textarea__wrapper {
+  position: relative;
+  display: block;
+  resize: vertical;
+  padding: 5px 11px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--lotus-input-text-color);
+  background-color: var(--lotus-input-bg-color);
+  background-image: none;
+  -webkit-appearance: none;
+  box-shadow: 0 0 0 1px var(--lotus-input-border-color) inset;
+  border-radius: var(--lotus-input-border-radius);
+  transition: all var(--lotus-transition-duration);
+  border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px var(--lotus-input-border-focus) inset !important;
+  }
+
+  &::placeholder {
+    color: var(--lotus-input-placeholder-color);
+  }
+}
+
+.lotus-input__wrapper {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 11px;
+  background-color: var(--lotus-input-bg-color);
+  background-image: none;
+  border-radius: var(--lotus-input-border-radius);
+  box-shadow: 0 0 0 1px var(--lotus-input-border-color) inset;
+
+  &:hover {
+    box-shadow: 0 0 0 1px var(--lotus-input-border-hover) inset;
+  }
+
+  &.is-focus {
+    box-shadow: 0 0 0 1px var(--lotus-input-border-focus) inset !important;
+  }
+
+  .lotus-input__inner {
+    --lotus-input-inner-height: calc(var(--lotus-input-height, 32px) - 2px);
+    width: 100%;
+    flex-grow: 1;
+    -webkit-appearance: none;
+    color: var(--lotus-input-text-color);
+    font-size: inherit;
+    height: var(--lotus-input-inner-height);
+    line-height: var(--lotus-input-inner-height);
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    box-sizing: border-box;
+    &::placeholder {
+      color: var(--lotus-input-placeholder-color);
+    }
+  }
+
+  .lotus-icon {
+    height: inherit;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--lotus-transition-duration);
+    margin-left: 8px;
+  }
+
+  .lotus-input__clear, .lotus-input__password {
+    color: var(--lotus-input-text-color);
+    font-size: 14px;
+    cursor: pointer;
+    &:hover {
+     color: var(--lotus-input-text-color-hover);
+    }
+  }
+}
