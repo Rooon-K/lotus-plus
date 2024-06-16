@@ -10,6 +10,7 @@
   --lotus-input-bg-color: var(--bg-color);
   --lotus-input-bg-color-hover: var(--bg-hover-color);
   --lotus-input-bg-color-disabled: var(--bg-disabled-color);
+  --lotus-input-bg-color-focus: var(--bg-header-color);
   --lotus-input-placeholder-color: var(--normal-special-color);
   --lotus-input-line-height: 32px;
 }
@@ -60,6 +61,7 @@
 
   &.is-focus .lotus-input__wrapper {
     box-shadow: 0 0 0 1px var(--lotus-input-border-focus) inset !important;
+    background-color: var(--lotus-input-bg-color-focus);
   }
 }
 
@@ -181,6 +183,7 @@
   &:focus {
     outline: none;
     box-shadow: 0 0 0 1px var(--lotus-input-border-focus) inset !important;
+    background-color: var(--lotus-input-bg-color-focus);
   }
 
   &::placeholder {
@@ -198,13 +201,16 @@
   background-image: none;
   border-radius: var(--lotus-input-border-radius);
   box-shadow: 0 0 0 1px var(--lotus-input-border-color) inset;
+  transition: all var(--lotus-transition-duration-fast);
 
   &:hover {
     box-shadow: 0 0 0 1px var(--lotus-input-border-hover) inset;
+    background-color: var(--lotus-input-bg-color-hover);
   }
 
   &.is-focus {
     box-shadow: 0 0 0 1px var(--lotus-input-border-focus) inset !important;
+    background-color: var(--lotus-input-bg-color-hover);
   }
 
   .lotus-input__inner {
@@ -236,12 +242,13 @@
     margin-left: 8px;
   }
 
-  .lotus-input__clear, .lotus-input__password {
+  .lotus-input__clear,
+  .lotus-input__password {
     color: var(--lotus-input-text-color);
     font-size: 14px;
     cursor: pointer;
     &:hover {
-     color: var(--lotus-input-text-color-hover);
+      color: var(--lotus-input-text-color-hover);
     }
   }
 }
