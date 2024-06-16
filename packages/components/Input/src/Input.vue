@@ -97,7 +97,10 @@ defineExpose<InputInstance>({
       'is-prepend': $slots.prepend,
       'is-append': $slots.append,
       'is-prefix': $slots.prefix,
-      'is-suffix': $slots.suffix
+      'is-suffix': $slots.suffix,
+      'is-error': error,
+      'is-success': success,
+      'is-warning': warning,
     }"
     :style="inputSty"
   >

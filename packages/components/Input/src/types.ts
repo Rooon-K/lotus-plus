@@ -12,6 +12,8 @@ export interface InputProps {
   disabled?: boolean;
   placeholder?: string;
   error?: boolean;
+  success?: boolean;
+  warning?: boolean;
   errorMessage?: string;
   clearable?: boolean;
   showPassword?: boolean;

@@ -24,6 +24,15 @@
   box-sizing: border-box;
   vertical-align: middle;
 
+  @each $status in success, warning, error {
+    &.is-$(status) {
+      --lotus-input-bg-color: var(--$(status)-light-color);
+      --lotus-input-bg-color-hover: var(--$(status)-hover-light-color);
+      --lotus-input-bg-color-disabled: var(--$(status)-disabled-color);
+      --lotus-input-border-focus: var(--$(status)-color);
+    }
+  }
+
   &.is-disabled {
     cursor: not-allowed;
     .lotus-input__wrapper {
@@ -175,9 +184,9 @@
   background-color: var(--lotus-input-bg-color);
   background-image: none;
   -webkit-appearance: none;
-  box-shadow: 0 0 0 1px var(--lotus-input-border-color) inset;
+  box-shadow: 0 0 0 1px transparent inset;
   border-radius: var(--lotus-input-border-radius);
-  transition: all var(--lotus-transition-duration);
+  transition: all var(--lotus-transition-duration-fast), height 0s;
   border: none;
 
   &:focus {
@@ -200,11 +209,10 @@
   background-color: var(--lotus-input-bg-color);
   background-image: none;
   border-radius: var(--lotus-input-border-radius);
-  box-shadow: 0 0 0 1px var(--lotus-input-border-color) inset;
+  box-shadow: 0 0 0 1px transparent inset;
   transition: all var(--lotus-transition-duration-fast);
 
   &:hover {
-    box-shadow: 0 0 0 1px var(--lotus-input-border-hover) inset;
     background-color: var(--lotus-input-bg-color-hover);
   }
 
