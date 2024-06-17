@@ -1,6 +1,6 @@
 {
   "name": "lotus-plus",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Components library by Vue3 + TS",
   "type": "module",
   "files": [
@@ -33,7 +33,8 @@
     "build-es:watch": "vite build --watch --config vite.es.config.ts",
     "build-umd:watch": "vite build --watch --config vite.umd.config.ts",
     "clean": "rimraf dist",
-    "release": "release-it"
+    "release": "run-s build release-it",
+    "release-only": "release-it"
   },
   "devDependencies": {
     "vite-plugin-compression2": "^1.1.1",
