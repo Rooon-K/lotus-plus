@@ -22,9 +22,7 @@ const passwordVisible = ref(false);
 const innerValue = ref<any>(props.modelValue);
 
 const showClear = computed(() => {
-  console.log(isHovered);
-
-  return props.clearable && !!innerValue.value && !props.disabled && isHovered.value;
+  return props.clearable && !!innerValue.value && !props.disabled && isFocused.value;
 });
 const showPasswordArea = computed(() => {
   return props.type === "password" && props.showPassword && !props.disabled && !!innerValue.value;
@@ -63,7 +61,7 @@ const togglePasswordVisible = () => {
   passwordVisible.value = !passwordVisible.value;
 };
 
-const { wrapperRef, isFocused, isHovered, handleFocus, handleBlur } = useFocusController(_ref);
+const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(_ref);
 
 const inputSty = computed(() => {
   return {
