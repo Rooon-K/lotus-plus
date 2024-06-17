@@ -27,4 +27,7 @@
   &.lotus-space--baseline {
     align-items: baseline;
   }
+  &.lotus-space--wrap {
+    flex-wrap: wrap;
+  }
 }

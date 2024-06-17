@@ -69,7 +69,8 @@ const children = domHelper
       'lotus-space--start': props.align === 'start',
       'lotus-space--end': props.align === 'end',
       'lotus-space--center': props.align === 'center',
-      'lotus-space--baseline': props.align === 'baseline'
+      'lotus-space--baseline': props.align === 'baseline',
+      'lotus-space--wrap': props.wrap
     }"
   >
     <div
