@@ -47,7 +47,7 @@ const getMarginStyle = (isLast: boolean): CSSProperties => {
   if (props.direction === "horizontal") {
     style.marginRight = marginRight;
   }
-  if (props.direction === "vertical") {
+  if (props.direction === "vertical" || props.wrap) {
     style.marginBottom = marginBottom;
   }
 

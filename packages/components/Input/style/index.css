@@ -85,7 +85,7 @@
   }
 }
 
-.lotus-input--large {
+.lotus-input--small {
   --lotus-input-line-height: 24px;
   font-size: 12px;
   .lotus-input__wrapper {
