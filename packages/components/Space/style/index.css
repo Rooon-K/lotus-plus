@@ -1,0 +1,30 @@
+.lotus-space {
+  display: inline-flex;
+
+  &.lotus-space--horizontal {
+    .lotus-space__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.lotus-space--vertical {
+    flex-direction: column;
+  }
+
+  &.lotus-space--start {
+    align-items: flex-start;
+  }
+
+  &.lotus-space--end {
+    align-items: flex-end;
+  }
+
+  &.lotus-space--center {
+    align-items: center;
+  }
+
+  &.lotus-space--baseline {
+    align-items: baseline;
+  }
+}

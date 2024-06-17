@@ -10,7 +10,8 @@ import {
   LMessage,
   LNotification,
   LTooltip,
-  LInput
+  LInput,
+  LSpace
 } from "@lotus-plus/components";
 import type { Plugin } from "vue";
 
@@ -26,5 +27,6 @@ export default [
   LMessage,
   LNotification,
   LTooltip,
-  LInput
+  LInput,
+  LSpace
 ] as Plugin[];

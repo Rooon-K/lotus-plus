@@ -25,3 +25,4 @@ export * from "./install";
 export * from "./error";
 export * from "./uniComponentId";
 export * from "./domHelper";
+export * from "./vueHelper";
