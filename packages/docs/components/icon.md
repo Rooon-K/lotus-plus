@@ -1,5 +1,8 @@
 ---
 search: false
+prev:
+  link: /components/button
+  text: Button 按钮
 next:
   link: /components/layout
   text: Layout 布局

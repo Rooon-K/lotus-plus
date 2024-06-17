@@ -54,6 +54,17 @@
   --danger-hover-light-color: #fdcdc5;
   --danger-disabled-light-color: #fbaca3;
 
+  /* Error */
+  --error-color: #f53f3f;
+  --error-hover-color: #f76560;
+  --error-click-color: #cb272d;
+  --error-special-color: #f98981;
+  --error-active-color: #fbaca3;
+  --error-disabled-color: #fdcdc5;
+  --error-light-color: #ffece8;
+  --error-hover-light-color: #fdcdc5;
+  --error-disabled-light-color: #fbaca3;
+
   /* Border */
   --border-color: #e5e6eb;
   --border-hover-color: #c9cdd4;
@@ -66,6 +77,7 @@
   --bg-disabled-color: #f7f8fa;
   --bg-heavey-color: #c9cdd4;
   --bg-header-color: #ffffff;
+  --bg-heaver-color: #17171a;
 
   /* TextColor */
   --text-color-1: #1d2129;

@@ -8,7 +8,9 @@ import {
   LCollapse,
   LCollapseItem,
   LMessage,
-  LNotification
+  LNotification,
+  LTooltip,
+  LInput
 } from "@lotus-plus/components";
 import type { Plugin } from "vue";
 
@@ -22,5 +24,7 @@ export default [
   LCollapse,
   LCollapseItem,
   LMessage,
-  LNotification
+  LNotification,
+  LTooltip,
+  LInput
 ] as Plugin[];

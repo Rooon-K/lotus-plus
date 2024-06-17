@@ -1,3 +1,10 @@
+---
+search: false
+prev:
+  link: /components/message
+  text: Message 消息提示
+---
+
 # Notification 通知
 
 ## 基本用法

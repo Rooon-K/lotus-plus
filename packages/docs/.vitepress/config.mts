@@ -39,7 +39,16 @@ export default defineConfig({
       },
       {
         text: "数据展示",
-        items: [{ text: "Collapse 折叠面板", link: "components/collapse" }]
+        items: [
+          { text: "Input 输入框", link: "components/input" },
+        ]
+      },
+      {
+        text: "数据输入",
+        items: [
+          { text: "Collapse 折叠面板", link: "components/collapse" },
+          { text: "Tooltip 文字提示", link: "components/tooltip" }
+        ]
       },
       {
         text: "反馈",

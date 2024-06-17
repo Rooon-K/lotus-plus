@@ -1,5 +1,8 @@
 ---
 search: false
+prev:
+  link: /components/input
+  text: Input 输入框
 next:
   link: /components/message
   text: Message 消息提示

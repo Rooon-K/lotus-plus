@@ -1,25 +1,18 @@
 <script setup lang="ts">
-import { LMessage, LButton } from "lotus-plus";
-import "lotus-plus/dist/theme/Button.css"
-import "lotus-plus/dist/theme/Message.css"
-const open = () => {
-  LMessage({
-    id: "loading",
-    message: "Loading...",
-    type: "loading"
-  });
-  setTimeout(() => {
-    LMessage({
-      id: "loading",
-      message: "loaded",
-      type: "success"
-    });
-  }, 2000);
-};
+import { ref } from "vue";
+
+const password = ref("");
 </script>
 
 <template>
   <div>
-    <l-button @click="open">Loading</l-button>
+    <l-input
+      type="password"
+      placeholder="sqsq"
+      clearable
+      v-model="password"
+      style="margin-top: 20px;"
+      width="300px"
+    />
   </div>
 </template>

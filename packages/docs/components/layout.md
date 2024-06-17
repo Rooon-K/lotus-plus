@@ -1,5 +1,8 @@
 ---
 search: false
+prev:
+  link: /components/icon
+  text: Icon 图标
 next:
   link: /components/link
   text: Link 链接

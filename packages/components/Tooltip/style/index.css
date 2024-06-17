@@ -1,0 +1,65 @@
+.lotus-tooltip {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  color: var(--text-color-5);
+  background-color: var(--bg-heaver-color);
+  border-radius: var(--lotus-border-radius-default);
+  max-width: 20rem;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  font-size: var(--lotus-font-size-default);
+
+  .lotus-tooltip-arrow {
+    visibility: hidden;
+
+    &.lotus-tooltip--top {
+      bottom: -4px;
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+    &.lotus-tooltip--bottom {
+      top: -4px;
+      border-left: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
+    }
+    &.lotus-tooltip--left {
+      right: -4px;
+      border-right: 1px solid var(--border-color);
+      border-top: 1px solid var(--border-color);
+    }
+    &.lotus-tooltip--right {
+      left: -4px;
+      border-left: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+  .lotus-tooltip-arrow::before {
+    visibility: visible;
+    content: "";
+    transform: rotate(45deg);
+  }
+
+  .lotus-tooltip-arrow,
+  .lotus-tooltip-arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    box-sizing: border-box;
+    background-color: var(--bg-heaver-color);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--lotus-transition-duration);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
