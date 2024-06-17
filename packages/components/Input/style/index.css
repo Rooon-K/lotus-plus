@@ -186,7 +186,7 @@
   -webkit-appearance: none;
   box-shadow: 0 0 0 1px transparent inset;
   border-radius: var(--lotus-input-border-radius);
-  transition: all var(--lotus-transition-duration-fast), height 0s;
+  transition: all var(--lotus-transition-duration-fast), height 0s, width 0s;
   border: none;
 
   &:focus {

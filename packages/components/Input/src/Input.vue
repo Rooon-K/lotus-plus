@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref, shallowRef, useAttrs, watch } from "vue";
+import { computed, nextTick, onMounted, ref, shallowRef, useAttrs, watch } from "vue";
 import type { InputEmits, InputInstance, InputProps } from "./types";
 import { LIcon } from "../../Icon";
 import { each, noop } from "lodash-es";
@@ -19,11 +19,13 @@ const inputRef = shallowRef<HTMLInputElement>();
 const textareaRef = shallowRef<HTMLTextAreaElement>();
 
 const passwordVisible = ref(false);
-const innerValue = ref(props.modelValue);
+const innerValue = ref<any>(props.modelValue);
 
-const showClear = computed(
-  () => props.clearable && !!innerValue.value && !props.disabled && isFocused.value
-);
+const showClear = computed(() => {
+  console.log(isHovered);
+
+  return props.clearable && !!innerValue.value && !props.disabled && isHovered.value;
+});
 const showPasswordArea = computed(() => {
   return props.type === "password" && props.showPassword && !props.disabled && !!innerValue.value;
 });
@@ -61,7 +63,7 @@ const togglePasswordVisible = () => {
   passwordVisible.value = !passwordVisible.value;
 };
 
-const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(_ref);
+const { wrapperRef, isFocused, isHovered, handleFocus, handleBlur } = useFocusController(_ref);
 
 const inputSty = computed(() => {
   return {
@@ -76,6 +78,10 @@ watch(
     innerValue.value = newValue;
   }
 );
+
+onMounted(() => {
+  innerValue.value = props.defaultValue;
+});
 
 defineExpose<InputInstance>({
   ref: _ref,
@@ -98,9 +104,9 @@ defineExpose<InputInstance>({
       'is-append': $slots.append,
       'is-prefix': $slots.prefix,
       'is-suffix': $slots.suffix,
-      'is-error': error,
-      'is-success': success,
-      'is-warning': warning,
+      'is-error': error || props.status === 'error',
+      'is-success': success || props.status ==='success',
+      'is-warning': warning || props.status === 'warning',
     }"
     :style="inputSty"
   >

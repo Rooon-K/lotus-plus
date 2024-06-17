@@ -6,7 +6,7 @@ export interface InputProps {
   id?: string;
   modelValue: string | number;
   type?: string;
-  defaultValue?: string;
+  defaultValue?: string | number;
   size?: InputSize;
   readonly?: boolean;
   disabled?: boolean;
@@ -14,6 +14,7 @@ export interface InputProps {
   error?: boolean;
   success?: boolean;
   warning?: boolean;
+  status?: "success" | "error" | "warning";
   errorMessage?: string;
   clearable?: boolean;
   showPassword?: boolean;
