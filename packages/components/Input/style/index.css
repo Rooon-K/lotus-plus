@@ -144,18 +144,14 @@
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  box-shadow: 1px 0 0 0 var(--lotus-input-border-color) inset,
-    0 1px 0 0 var(--lotus-input-border-color) inset,
-    0 -1px 0 0 var(--lotus-input-border-color) inset;
+  box-shadow: -1px 0 0 0 var(--lotus-input-border-color) inset;
 }
 
 .lotus-input__append {
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  box-shadow: 0 1px 0 0 var(--lotus-input-border-color) inset,
-    0 -1px 0 0 var(--lotus-input-border-color) inset,
-    -1px 0 0 0 var(--lotus-input-border-color) inset;
+  box-shadow: 1px 0 0 0 var(--lotus-input-border-color) inset;
   & > .lotus-input__wrapper {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

@@ -103,8 +103,8 @@ defineExpose<InputInstance>({
       'is-prefix': $slots.prefix,
       'is-suffix': $slots.suffix,
       'is-error': error || props.status === 'error',
-      'is-success': success || props.status ==='success',
-      'is-warning': warning || props.status === 'warning',
+      'is-success': success || props.status === 'success',
+      'is-warning': warning || props.status === 'warning'
     }"
     :style="inputSty"
   >

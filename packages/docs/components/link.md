@@ -4,8 +4,8 @@ prev:
   link: /components/layout
   text: Layout 布局
 next:
-  link: /components/collapse
-  text: Collapse 折叠面板
+  link: /components/space
+  text: Space 间距
 ---
 
 # Link 链接
