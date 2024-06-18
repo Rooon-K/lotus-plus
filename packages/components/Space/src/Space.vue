@@ -79,6 +79,14 @@ const children = domHelper
       :key="index"
       :style="getMarginStyle(index === children.length - 1)"
     >
+      <div class="lotus-space__split" :style="getMarginStyle(false)">
+        <component
+          v-for="slot in slots.split?.()"
+          :key="slot"
+          :is="slot"
+          v-if="slots.split && index > 0"
+        ></component>
+      </div>
       <component :is="item"></component>
     </div>
   </div>

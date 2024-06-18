@@ -50,6 +50,14 @@ demo-preview=../demo/space/Align.vue
 demo-preview=../demo/space/Wrap.vue
 :::
 
+## 分隔符
+
+可以设置分隔符。
+
+::: preview
+demo-preview=../demo/space/Split.vue
+:::
+
 ## Space API
 
 ### Props
