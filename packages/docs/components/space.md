@@ -68,3 +68,10 @@ demo-preview=../demo/space/Split.vue
 | align     | 间距对齐方式, 可选值为 `start` 、 `end` 、 `center` 、 `baseline` | string  | `center`     |
 | wrap      | 是否换行                                                          | boolean | `false`      |
 | direction | 排列方向, 可选值为 `horizontal` 、 `vertical`                     | string  | `horizontal` |
+
+### Slots
+
+| 名称    | 说明             |
+| ------- | ---------------- |
+| default | 自定义内容       |
+| split   | 自定义分隔符内容 |
